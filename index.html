@@ -5,7 +5,7 @@
     <title>F. D. Anfinston | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of F. D. Anfinston – HoD (ECE), Achariya College of Engineering Technology. Academician, researcher, AI & DS educator and motivational speaker."
+      content="Portfolio of F. D. Anfinston – HoD (ECE), Achariya College of Engineering Technology. Academician, researcher, AI & DS educator, IQAC coordinator and motivational speaker."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="profile.JPG" type="image/jpeg" />
@@ -19,12 +19,22 @@
           <div class="logo-badge">
             <img src="profile.JPG" alt="F. D. Anfinston" />
           </div>
-          <div>
+          <div class="logo-text">
             <div class="logo-text-main">F. D. ANFINSTON</div>
             <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
           </div>
         </div>
-        <div class="nav-links">
+
+        <!-- mobile hamburger -->
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-menu">
           <a href="index.html" class="active">Home</a>
           <a href="about.html">About</a>
           <a href="experience.html">Experience</a>
@@ -32,7 +42,11 @@
           <a href="projects.html">Projects</a>
           <a href="achievements.html">Achievements</a>
           <a href="contact.html">Contact</a>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle light/dark mode"
+          >
             <span class="theme-icon">🌙</span>
           </button>
         </div>
@@ -93,6 +107,32 @@
             <a class="btn btn-outline" href="achievements.html">
               Awards &amp; Impact
             </a>
+          </div>
+
+          <!-- NEW summary strip filling blank space -->
+          <div class="hero-summary-strip">
+            <div class="hero-summary-item">
+              <h4>Quality &amp; IQAC</h4>
+              <p>
+                IQAC Coordinator leading NAAC documentation, AQAR preparation,
+                internal audits and quality initiatives across ACET.
+              </p>
+            </div>
+            <div class="hero-summary-item">
+              <h4>Exam &amp; Governance</h4>
+              <p>
+                Controller of Examinations &amp; Chief Superintendent for NEET
+                and Government exams, ensuring disciplined and transparent
+                assessment.
+              </p>
+            </div>
+            <div class="hero-summary-item">
+              <h4>Mentoring &amp; Guidance</h4>
+              <p>
+                Motivational and career guidance speaker for 50+ schools and
+                colleges, mentoring students towards value-based success.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -158,9 +198,11 @@
             <article class="hero-card">
               <h3>AI &amp; Data Science Readiness</h3>
               <p>
-                Completed <strong>AICTE Sponsored QIP PG Course in AI &amp; Data
-                Science</strong> at <strong>IIIT Kottayam</strong>, making me
-                eligible to handle AI &amp; DS subjects as per AICTE norms.
+                Completed
+                <strong>AICTE Sponsored QIP PG Course in AI &amp; Data
+                  Science</strong>
+                at <strong>IIIT Kottayam</strong>, making me eligible to handle
+                AI &amp; DS subjects as per AICTE norms.
               </p>
               <div class="hero-chip-row">
                 <span class="chip">ML Fundamentals</span>
@@ -174,7 +216,7 @@
                 <li>HoD – Electronics &amp; Communication Engineering</li>
                 <li>Controller of Examinations (Internal)</li>
                 <li>Chief Superintendent for NEET &amp; Govt exams</li>
-                <li>University Nodal Officer &amp; Quality Lead</li>
+                <li>University Nodal Officer &amp; IQAC Coordinator</li>
               </ul>
             </article>
           </div>
@@ -231,8 +273,8 @@
                 planning.
               </li>
               <li>
-                Mentor for first-generation learners and rural students to
-                dream beyond boundaries.
+                Mentor for first-generation learners and rural students to dream
+                beyond boundaries.
               </li>
               <li>
                 Reach me via <a href="contact.html#speaker">Contact</a> for
@@ -249,7 +291,8 @@
           <div class="stat-pill">Smart India Hackathon Mentor (Finalist 2018)</div>
           <div class="stat-pill">AICTE QIP PG – AI &amp; DS (IIIT Kottayam)</div>
           <div class="stat-pill">
-            CS for NEET &amp; Govt Exams • University Nodal Officer
+            CS for NEET &amp; Govt Exams • University Nodal Officer • IQAC
+            Coordinator
           </div>
         </div>
       </section>
