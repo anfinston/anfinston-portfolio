@@ -6,10 +6,9 @@
 }
 
 :root {
-  --primary: #2563eb;       /* Indigo */
+  --primary: #2563eb;
   --primary-dark: #1d4ed8;
-  --accent: #f97316;        /* Warm orange */
-  --accent-soft: #fed7aa;
+  --accent: #f97316;
   --teal: #14b8a6;
   --bg: #eef2ff;
   --bg-soft: #e0f2fe;
@@ -18,9 +17,14 @@
   --muted: #6b7280;
   --border-radius: 18px;
   --shadow-soft: 0 14px 35px rgba(15, 23, 42, 0.12);
+  --shadow-strong: 0 22px 45px rgba(15, 23, 42, 0.25);
   --max-width: 1100px;
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -99,6 +103,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .logo-badge img {
@@ -107,6 +112,11 @@ header {
   border-radius: 999px;
   object-fit: cover;
   display: block;
+}
+
+.logo:hover .logo-badge {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.8);
 }
 
 .logo span:last-child {
@@ -127,14 +137,16 @@ header {
   font-size: 0.9rem;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  transition: all 0.2s ease;
   border: 1px solid transparent;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .nav-links a:hover {
   color: #f9fafb;
   border-color: rgba(191, 219, 254, 0.7);
   background: rgba(30, 64, 175, 0.7);
+  transform: translateY(-1px);
 }
 
 .nav-links a.active {
@@ -168,6 +180,20 @@ a:hover {
   background: linear-gradient(135deg, #eff6ff, #e0f2fe);
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(191, 219, 254, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(59, 130, 246, 0.16),
+    transparent 55%
+  );
+  pointer-events: none;
 }
 
 .hero-tag {
@@ -183,7 +209,7 @@ a:hover {
   margin-bottom: 0.9rem;
 }
 
-.hero-tag span.badge-dot {
+.hero-tag .badge-dot {
   width: 7px;
   height: 7px;
   border-radius: 999px;
@@ -198,7 +224,7 @@ a:hover {
   color: #020617;
 }
 
-.hero-title span.highlight {
+.hero-title .highlight {
   background: linear-gradient(to right, #f97316, #facc15, #22c55e);
   -webkit-background-clip: text;
   color: transparent;
@@ -210,6 +236,7 @@ a:hover {
   max-width: 34rem;
 }
 
+/* Experience—Domain—Contact row */
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -226,9 +253,8 @@ a:hover {
 }
 
 .hero-meta-label {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   font-size: 0.7rem;
+  text-transform: uppercase;
   color: #6b7280;
 }
 
@@ -239,18 +265,35 @@ a:hover {
   margin-top: 1.1rem;
 }
 
-/* Hero right card */
+/* ========== HERO RIGHT PANEL (dark cards) ========== */
 
 .hero-right {
   padding: 1.8rem 1.5rem;
   border-radius: 26px;
-  background: radial-gradient(circle at top, #0f172a, #1e293b);
+  background: radial-gradient(circle at top, #020617, #111827, #1e293b);
   border: 1px solid rgba(30, 64, 175, 0.8);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+  box-shadow: var(--shadow-strong);
   color: #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(59, 130, 246, 0.28),
+    transparent 60%
+  );
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 .hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
@@ -259,8 +302,19 @@ a:hover {
 .hero-card {
   padding: 1rem;
   border-radius: 18px;
-  background: radial-gradient(circle at top left, #1d4ed8, #020617 75%);
+  background: radial-gradient(circle at top left, #1d4ed8, #020617 70%);
   border: 1px solid rgba(148, 163, 184, 0.7);
+  color: #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.75);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, background 0.25s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.85);
+  border-color: rgba(248, 250, 252, 0.8);
+  background: radial-gradient(circle at top left, #2563eb, #020617 75%);
 }
 
 .hero-card h3 {
@@ -274,6 +328,23 @@ a:hover {
   color: #e5e7eb;
 }
 
+/* ✔️ FIX FOR INVISIBLE TEXT IN HERO CARD LISTS */
+.hero-card .card-list {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  color: #f3f4f6;
+}
+
+.hero-card .card-list li {
+  color: #f3f4f6;
+}
+
+.hero-card .card-list li::marker {
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* Chips inside hero cards */
 .hero-chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -303,8 +374,9 @@ a:hover {
   font-size: 0.9rem;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s ease;
   white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-primary {
@@ -326,9 +398,10 @@ a:hover {
 
 .btn-ghost:hover {
   background: #e0f2fe;
+  transform: translateY(-1px);
 }
 
-/* ========== Sections & Cards ========== */
+/* ========== Sections & Cards (other pages) ========== */
 
 .section {
   margin-top: 2.75rem;
@@ -353,11 +426,37 @@ a:hover {
 }
 
 .card {
+  position: relative;
   padding: 1.25rem 1.4rem;
   border-radius: var(--border-radius);
   background: var(--card-bg);
-  border: 1px solid rgba(209, 213, 219, 0.9);
+  border: 1px solid #d1d5db;
   box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, background 0.25s ease;
+}
+
+/* Gradient border trick on hover */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, #2563eb, #14b8a6, #f97316);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: transparent;
+  background: #ffffff;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card h3 {
@@ -388,7 +487,7 @@ a:hover {
   margin-bottom: 0.25rem;
 }
 
-/* ========== Timeline Lists ========== */
+/* ========== Timeline Lists (About / Experience / Awards) ========== */
 
 .timeline {
   display: flex;
@@ -437,7 +536,25 @@ a:hover {
   color: var(--muted);
 }
 
-/* ========== Contact ========== */
+/* ========== Stats pills (home bottom row) ========== */
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.stat-pill {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 0.8rem;
+  color: #374151;
+  background: #ffffff;
+}
+
+/* ========== Contact Page ========== */
 
 .contact-wrapper {
   display: grid;
@@ -463,7 +580,7 @@ a:hover {
   margin-bottom: 0.7rem;
 }
 
-.contact-pill span.label {
+.contact-pill .label {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -480,9 +597,11 @@ a:hover {
 .contact-grid div {
   padding: 0.7rem 0.8rem;
   border-radius: 14px;
-  border: 1px solid rgba(209, 213, 219, 0.9);
+  border: 1px solid #d1d5db;
   background: #ffffff;
 }
+
+/* Form styling */
 
 form {
   display: grid;
@@ -500,10 +619,11 @@ textarea {
   width: 100%;
   padding: 0.55rem 0.7rem;
   border-radius: 10px;
-  border: 1px solid rgba(209, 213, 219, 0.9);
+  border: 1px solid #d1d5db;
   background: #ffffff;
   color: #111827;
   font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 input:focus,
@@ -511,6 +631,7 @@ textarea:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
 }
 
 textarea {
@@ -521,7 +642,7 @@ textarea {
 /* ========== Footer ========== */
 
 footer {
-  border-top: 1px solid rgba(209, 213, 219, 0.9);
+  border-top: 1px solid #d1d5db;
   margin-top: 3rem;
   background: #f9fafb;
 }
@@ -545,24 +666,6 @@ footer {
 
 .footer-inner a:hover {
   color: #1e3a8a;
-}
-
-/* ========== Utility Rows ========== */
-
-.stats-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 0.8rem;
-}
-
-.stat-pill {
-  padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-  border: 1px solid rgba(209, 213, 219, 0.9);
-  font-size: 0.8rem;
-  color: #374151;
-  background: #ffffff;
 }
 
 /* ========== Responsive ========== */
@@ -597,7 +700,8 @@ footer {
   }
 
   .hero-right {
-    padding: 1.3rem 1.2rem;
+    margin-top: 0.5rem;
+    padding: 1.4rem 1.3rem;
   }
 }
 
