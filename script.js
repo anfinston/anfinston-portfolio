@@ -8,22 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function applyTheme(dark) {
     body.classList.toggle("dark-mode", dark);
-    if (dark) {
-      toggleIcon.textContent = "☀️";
-    } else {
-      toggleIcon.textContent = "🌙";
+    if (toggleIcon) {
+      toggleIcon.textContent = dark ? "☀️" : "🌙";
     }
   }
 
-  // Load preference
+  // Default is LIGHT mode unless user previously selected dark
   const storedTheme = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  let dark = storedTheme
-    ? storedTheme === "dark"
-    : prefersDark;
-
+  let dark = storedTheme ? storedTheme === "dark" : false;
   applyTheme(dark);
 
   if (toggleBtn) {
@@ -46,24 +38,35 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      {
-        threshold: 0.15,
-      }
+      { threshold: 0.15 }
     );
     fadeEls.forEach(el => observer.observe(el));
   } else {
-    // Fallback: show everything
     fadeEls.forEach(el => el.classList.add("visible"));
   }
 
-  /* ==== SIMPLE PARALLAX FOR HERO RIGHT PANEL ==== */
+  /* ==== PARALLAX ON DESKTOP ONLY ==== */
   const heroRight = document.querySelector(".hero-right");
-  const parallaxStrength = 0.15; // smaller = subtle
+  const strength = 0.12; // parallax intensity
+  const maxShift = 80; // px
+
+  function parallaxEnabled() {
+    return window.innerWidth >= 992; // desktop only
+  }
+
+  function updateParallax() {
+    if (!heroRight) return;
+    if (!parallaxEnabled()) {
+      heroRight.style.transform = "translateY(0)";
+      return;
+    }
+    const offset = Math.min(window.scrollY * strength, maxShift);
+    heroRight.style.transform = `translateY(${offset}px)`;
+  }
 
   if (heroRight) {
-    window.addEventListener("scroll", () => {
-      const offset = window.scrollY * parallaxStrength;
-      heroRight.style.transform = `translateY(${offset}px)`;
-    });
+    window.addEventListener("scroll", updateParallax);
+    window.addEventListener("resize", updateParallax);
+    updateParallax();
   }
 });
