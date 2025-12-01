@@ -1,72 +1,75 @@
 // script.js
+document.addEventListener("DOMContentLoaded", function () {
+  /* ---------- YEAR IN FOOTER ---------- */
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
-  /* ==== DARK MODE TOGGLE ==== */
-  const body = document.body;
-  const toggleBtn = document.getElementById("theme-toggle");
-  const toggleIcon = document.querySelector(".theme-icon");
+  /* ---------- THEME TOGGLE (LIGHT / DARK) ---------- */
+  const root = document.documentElement;
+  const themeToggle = document.querySelector(".theme-toggle");
+  const themeIcon = document.querySelector(".theme-icon");
 
-  function applyTheme(dark) {
-    body.classList.toggle("dark-mode", dark);
-    if (toggleIcon) {
-      toggleIcon.textContent = dark ? "☀️" : "🌙";
+  function applyTheme(mode) {
+    if (mode === "dark") {
+      root.classList.add("dark-theme");
+      if (themeIcon) themeIcon.textContent = "🌙";
+    } else {
+      root.classList.remove("dark-theme");
+      if (themeIcon) themeIcon.textContent = "☀️";
     }
   }
 
-  // Default is LIGHT mode unless user previously selected dark
-  const storedTheme = localStorage.getItem("theme");
-  let dark = storedTheme ? storedTheme === "dark" : false;
-  applyTheme(dark);
+  const savedTheme = localStorage.getItem("theme") || "light";
+  applyTheme(savedTheme);
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      dark = !dark;
-      applyTheme(dark);
-      localStorage.setItem("theme", dark ? "dark" : "light");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const isDarkNow = root.classList.toggle("dark-theme");
+      const mode = isDarkNow ? "dark" : "light";
+      localStorage.setItem("theme", mode);
+      if (themeIcon) themeIcon.textContent = isDarkNow ? "🌙" : "☀️";
     });
   }
 
-  /* ==== FADE-IN ON SCROLL ==== */
-  const fadeEls = document.querySelectorAll(".fade-in");
-  if ("IntersectionObserver" in window && fadeEls.length) {
+  /* ---------- MOBILE NAV TOGGLE ---------- */
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-links");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("open");
+      navToggle.classList.toggle("active");
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        navToggle.classList.remove("active");
+      });
+    });
+  }
+
+  /* ---------- SIMPLE FADE-IN ON SCROLL ---------- */
+  const fadeEls = document.querySelectorAll(".fade-section, .card, .hero-main");
+
+  if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.18 }
     );
-    fadeEls.forEach(el => observer.observe(el));
+
+    fadeEls.forEach((el) => observer.observe(el));
   } else {
-    fadeEls.forEach(el => el.classList.add("visible"));
-  }
-
-  /* ==== PARALLAX ON DESKTOP ONLY ==== */
-  const heroRight = document.querySelector(".hero-right");
-  const strength = 0.12; // parallax intensity
-  const maxShift = 80; // px
-
-  function parallaxEnabled() {
-    return window.innerWidth >= 992; // desktop only
-  }
-
-  function updateParallax() {
-    if (!heroRight) return;
-    if (!parallaxEnabled()) {
-      heroRight.style.transform = "translateY(0)";
-      return;
-    }
-    const offset = Math.min(window.scrollY * strength, maxShift);
-    heroRight.style.transform = `translateY(${offset}px)`;
-  }
-
-  if (heroRight) {
-    window.addEventListener("scroll", updateParallax);
-    window.addEventListener("resize", updateParallax);
-    updateParallax();
+    // fallback
+    fadeEls.forEach((el) => el.classList.add("visible"));
   }
 });
