@@ -1,274 +1,203 @@
-<header class="site-header">
-  <nav class="navbar container">
-    <a href="index.html" class="brand">
-      <div class="brand-avatar">
-        <img src="profile.JPG" alt="F. D. Anfinston" />
-      </div>
-      <div class="brand-text">
-        <div class="brand-name">F. D. ANFINSTON</div>
-        <div class="brand-tagline">ECE • ACADEMICIAN • RESEARCHER</div>
-      </div>
-    </a>
-
-    <!-- Mobile menu button -->
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Links + theme toggle -->
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="experience.html">Experience</a>
-      <a href="academics.html">Academics</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-
-      <button class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-icon">🌙</span>
-      </button>
-    </div>
-  </nav>
-</header>
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>F. D. Anfinston | Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio of F. D. Anfinston – HoD (ECE), Achariya College of Engineering Technology. Academician, researcher, AI & DS educator, IQAC coordinator and motivational speaker."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="profile.JPG" type="image/jpeg" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <div class="logo-badge">
-            <img src="profile.JPG" alt="F. D. Anfinston" />
-          </div>
-          <div class="logo-text">
-            <div class="logo-text-main">F. D. ANFINSTON</div>
-            <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>F. D. Anfinston | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="profile.JPG" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header (same on all pages) -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="brand">
+        <div class="brand-avatar">
+          <img src="profile.JPG" alt="F. D. Anfinston" />
         </div>
+        <div class="brand-text">
+          <div class="brand-name">F. D. ANFINSTON</div>
+          <div class="brand-tagline">ECE • ACADEMICIAN • RESEARCHER</div>
+        </div>
+      </a>
 
-        <!-- mobile hamburger -->
-        <button
-          class="nav-toggle"
-          id="nav-toggle"
-          aria-label="Toggle navigation menu"
-        >
-          <span></span><span></span><span></span>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="academics.html">Academics</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☀️</span>
         </button>
+      </div>
+    </nav>
+  </header>
 
-        <div class="nav-links" id="nav-menu">
-          <a href="index.html" class="active">Home</a>
-          <a href="about.html">About</a>
-          <a href="experience.html">Experience</a>
-          <a href="academics.html">Academics</a>
-          <a href="projects.html">Projects</a>
-          <a href="achievements.html">Achievements</a>
-          <a href="contact.html">Contact</a>
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            aria-label="Toggle light/dark mode"
-          >
-            <span class="theme-icon">🌙</span>
-          </button>
-        </div>
-      </nav>
-    </header>
+  <main>
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left -->
+          <div class="hero-main fade-section">
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot"></span>
+              <span>Head of the Department – ECE, Achariya CET</span>
+            </div>
 
-    <main class="container">
-      <!-- HERO -->
-      <section class="hero fade-in">
-        <div class="hero-left">
-          <div class="hero-tag">
-            <span class="badge-dot"></span>
-            <span>Head of the Department – ECE, Achariya CET</span>
+            <h1 class="hero-title">
+              Shaping <span class="highlight-green">future</span>
+              <span class="highlight-gold">engineers</span>
+              through discipline, technology &amp; mentoring.
+            </h1>
+
+            <p class="hero-lead">
+              “Difference Maker” – a phenomenal leader with strong moral values.
+              An academician with 13+ years of experience in teaching, mentoring
+              and academic leadership, currently heading the
+              <strong>Department of Electronics and Communication Engineering</strong>
+              at <strong>Achariya College of Engineering Technology, Puducherry.</strong>
+            </p>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                EXPERIENCE
+                <strong>13+ Years in Academia</strong>
+              </div>
+              <div class="hero-meta-item">
+                DOMAINS
+                <strong>Electronics • Communication • AI &amp; Data</strong>
+              </div>
+              <div class="hero-meta-item">
+                RESEARCH
+                <strong>AI-based Medical Image Fusion</strong>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn-pill btn-primary" href="about.html">View Profile</a>
+              <a class="btn-pill btn-outline" href="experience.html">
+                Department Roles
+              </a>
+              <a class="btn-pill btn-soft" href="contact.html">
+                Invite as Speaker
+              </a>
+              <a class="btn-pill btn-soft" href="https://github.com/anfinston" target="_blank">
+                GitHub Profile
+              </a>
+            </div>
           </div>
 
-          <h1 class="hero-title">
-            Shaping <span class="highlight">future engineers</span><br />
-            through discipline, technology &amp; mentoring.
-          </h1>
+          <!-- Right Panel -->
+          <aside class="hero-panel fade-section">
+            <div class="hero-panel-grid">
+              <div class="hero-panel-row">
+                <article class="panel-card">
+                  <h3>Academic Snapshot</h3>
+                  <p>
+                    Pursuing Ph.D. in Electronics &amp; Communication Engineering
+                    at Puducherry Technological University with focus on
+                    AI-powered medical imaging and transformer-based PET/MRI
+                    fusion models for Alzheimer’s disease classification.
+                  </p>
+                  <div>
+                    <span class="chip">Medical Image Fusion</span>
+                    <span class="chip">Deep Learning</span>
+                  </div>
+                </article>
 
-          <p class="hero-subtitle">
-            “Difference Maker” – Phenomenal leader with strong moral values.
-            An academician with 13+ years of experience in teaching, mentoring
-            and academic leadership, currently heading the Department of
-            Electronics and Communication Engineering at
-            <strong>Achariya College of Engineering Technology, Puducherry.</strong>
+                <article class="panel-card">
+                  <h3>Teaching Portfolio</h3>
+                  <p>
+                    Handles core ECE papers and AI-related courses including:
+                  </p>
+                  <ul>
+                    <li>Electronic Devices &amp; Circuits</li>
+                    <li>Digital System Design</li>
+                    <li>Communication Engineering</li>
+                    <li>Cellular Mobile Communication</li>
+                    <li>Introduction to AI &amp; Data Science</li>
+                  </ul>
+                </article>
+              </div>
+
+              <div class="hero-panel-row">
+                <article class="panel-card">
+                  <h3>Academic Output</h3>
+                  <ul>
+                    <li>6+ research papers in journals &amp; conferences.</li>
+                    <li>15+ Faculty Development Programmes.</li>
+                    <li>20+ workshops &amp; 15+ seminars attended.</li>
+                    <li>60+ webinars in emerging technologies.</li>
+                  </ul>
+                  <p style="margin-top:0.4rem;font-size:0.8rem;">
+                    Detailed publications and FDPs are listed under
+                    <a href="academics.html" style="color:#93c5fd;">Academics</a>.
+                  </p>
+                </article>
+
+                <article class="panel-card">
+                  <h3>Awards &amp; Recognition</h3>
+                  <ul>
+                    <li>Naneri Aasiriyar Award – Madurai Ilakiya Manram (2024).</li>
+                    <li>Department &amp; institutional best teacher recognitions.</li>
+                    <li>Recognised by management as
+                      <strong>“Difference Maker – Phenomenal Leader”</strong>.
+                    </li>
+                  </ul>
+                </article>
+              </div>
+
+              <div class="hero-panel-row">
+                <article class="panel-card">
+                  <h3>AI &amp; Data Science Readiness</h3>
+                  <p>
+                    Completed <strong>AICTE Sponsored QIP PG Course</strong> in
+                    Artificial Intelligence &amp; Data Science at
+                    <strong>IIIT Kottayam</strong>, making him
+                    <strong>eligible to handle AI &amp; DS subjects as per AICTE norms.</strong>
+                  </p>
+                  <div>
+                    <span class="chip">ML Fundamentals</span>
+                    <span class="chip">Python &amp; Data Science</span>
+                  </div>
+                </article>
+
+                <article class="panel-card">
+                  <h3>Leadership Snapshot</h3>
+                  <ul>
+                    <li>HoD – Electronics &amp; Communication Engineering.</li>
+                    <li>IQAC Coordinator – Achariya CET.</li>
+                    <li>Controller of Examinations (Internal).</li>
+                    <li>Chief Superintendent for NEET &amp; Govt. exams.</li>
+                    <li>University Nodal Officer &amp; Quality Lead.</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section class="section fade-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">What I Do</h2>
+          <p class="section-subtitle">
+            A quick overview of my work as a teacher, mentor and academic leader.
           </p>
+        </header>
 
-          <div class="hero-meta">
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Experience</span>
-              <span>13+ Years in Academia</span>
-            </div>
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Domains</span>
-              <span>Electronics • Communication • AI &amp; Data</span>
-            </div>
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Research</span>
-              <span>AI-based Medical Image Fusion</span>
-            </div>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="about.html">View Profile</a>
-            <a class="btn btn-ghost" href="experience.html">Department Roles</a>
-            <a class="btn btn-outline" href="contact.html#speaker">
-              Invite as Speaker
-            </a>
-            <a
-              class="btn btn-ghost"
-              href="https://github.com/anfinston"
-              target="_blank"
-              rel="noopener"
-            >
-              GitHub Profile
-            </a>
-            <a class="btn btn-outline" href="achievements.html">
-              Awards &amp; Impact
-            </a>
-          </div>
-
-          <!-- NEW summary strip filling blank space -->
-          <div class="hero-summary-strip">
-            <div class="hero-summary-item">
-              <h4>Quality &amp; IQAC</h4>
-              <p>
-                IQAC Coordinator leading NAAC documentation, AQAR preparation,
-                internal audits and quality initiatives across ACET.
-              </p>
-            </div>
-            <div class="hero-summary-item">
-              <h4>Exam &amp; Governance</h4>
-              <p>
-                Controller of Examinations &amp; Chief Superintendent for NEET
-                and Government exams, ensuring disciplined and transparent
-                assessment.
-              </p>
-            </div>
-            <div class="hero-summary-item">
-              <h4>Mentoring &amp; Guidance</h4>
-              <p>
-                Motivational and career guidance speaker for 50+ schools and
-                colleges, mentoring students towards value-based success.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-right" data-parallax="0.15">
-          <div class="hero-photo-wrapper">
-            <div class="photo-circle">
-              <img src="profile.JPG" alt="F. D. Anfinston" />
-            </div>
-          </div>
-
-          <div class="hero-grid">
-            <article class="hero-card">
-              <h3>Academic Snapshot</h3>
-              <p>
-                Pursuing Ph.D. in Electronics and Communication Engineering at
-                Puducherry Technological University with focus on AI-powered
-                medical imaging.
-              </p>
-              <div class="hero-chip-row">
-                <span class="chip">Medical Image Fusion</span>
-                <span class="chip">Deep Learning</span>
-              </div>
-            </article>
-
-            <article class="hero-card">
-              <h3>Teaching Portfolio</h3>
-              <p>Handled diverse ECE &amp; AI-related subjects including:</p>
-              <ul class="card-list">
-                <li>Electronic Devices &amp; Circuits</li>
-                <li>Digital System Design</li>
-                <li>Cellular Mobile Communication</li>
-                <li>Digital Image Processing &amp; AI Basics</li>
-              </ul>
-              <p class="card-meta">
-                See <a href="academics.html">Academics</a> for subject list.
-              </p>
-            </article>
-
-            <article class="hero-card">
-              <h3>Academic Output</h3>
-              <ul class="card-list">
-                <li>6+ Journal &amp; Conference Publications</li>
-                <li>15+ FDPs • 20+ Workshops • 60+ Webinars</li>
-                <li>
-                  Smart India Hackathon Mentor
-                  <span class="tag-inline">(Finalist – Manipal 2018)</span>
-                </li>
-              </ul>
-              <p class="card-meta">
-                Detailed in <a href="achievements.html">Achievements</a>.
-              </p>
-            </article>
-
-            <article class="hero-card">
-              <h3>Awards &amp; Recognition</h3>
-              <ul class="card-list">
-                <li>Naneri Aasiriyar Award – 2024</li>
-                <li>Outstanding Young Professor – ESN Publication</li>
-                <li>Star of the Year &amp; Dronachariya – Achariya CET</li>
-              </ul>
-            </article>
-
-            <article class="hero-card">
-              <h3>AI &amp; Data Science Readiness</h3>
-              <p>
-                Completed
-                <strong>AICTE Sponsored QIP PG Course in AI &amp; Data
-                  Science</strong>
-                at <strong>IIIT Kottayam</strong>, making me eligible to handle
-                AI &amp; DS subjects as per AICTE norms.
-              </p>
-              <div class="hero-chip-row">
-                <span class="chip">ML Fundamentals</span>
-                <span class="chip">Python &amp; Data Science</span>
-              </div>
-            </article>
-
-            <article class="hero-card">
-              <h3>Leadership Snapshot</h3>
-              <ul class="card-list">
-                <li>HoD – Electronics &amp; Communication Engineering</li>
-                <li>Controller of Examinations (Internal)</li>
-                <li>Chief Superintendent for NEET &amp; Govt exams</li>
-                <li>University Nodal Officer &amp; IQAC Coordinator</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHAT I DO -->
-      <section class="section fade-in">
-        <h2 class="section-title">What I Do</h2>
-        <p class="section-subtitle">
-          A quick overview of my work as a teacher, mentor, team leader and
-          department head. Visit
-          <a href="experience.html">Experience</a> for full details.
-        </p>
-
-        <div class="grid-2">
+        <div class="projects-grid">
           <article class="card">
             <h3>Academic Leadership</h3>
             <p>
@@ -276,80 +205,62 @@
               implementation and continuous improvement of the department at
               Achariya CET.
             </p>
-            <ul class="card-list">
+            <ul class="list-bullets">
               <li>Design academic schedules and lesson plans.</li>
-              <li>
-                Support faculty in course delivery, syllabus coverage and
-                documentation.
-              </li>
-              <li>
-                Coordinate with Principal, Management, University &amp;
-                regulatory bodies.
-              </li>
-              <li>
-                Lead departmental events, symposiums, workshops and value-added
-                programmes as convenor.
-              </li>
+              <li>Support faculty in course delivery and documentation.</li>
+              <li>Coordinate with Principal, Management and University.</li>
+              <li>Lead technical symposiums, fests and outreach events.</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3>Motivational &amp; Career Guidance Speaker</h3>
+            <h3>Exam &amp; Quality Systems</h3>
             <p>
-              I actively engage with young learners on values, discipline and
-              future planning.
+              Drives institutional quality initiatives and examination systems
+              with strong compliance to university and AICTE norms.
             </p>
-            <ul class="card-list">
+            <ul class="list-bullets">
+              <li>IQAC Coordinator for NAAC &amp; quality documentation.</li>
+              <li>Controller of Examinations &amp; internal exam policies.</li>
+              <li>Chief Superintendent &amp; Venue CS for NEET and Govt. exams.</li>
+              <li>University Nodal Officer for academic communication.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Mentoring &amp; Motivation</h3>
+            <p>
+              Passionate motivational and career guidance speaker with strong
+              connect to schools and colleges.
+            </p>
+            <ul class="list-bullets">
               <li>
-                Delivered <strong>50+ motivational and career guidance talks</strong>
-                in schools and colleges.
+                Addressed <strong>50+ schools and colleges</strong> on career
+                guidance and higher education.
               </li>
+              <li>Guides student projects, innovation and hackathons.</li>
               <li>
-                Sessions on discipline, goal setting and higher-education
-                planning.
-              </li>
-              <li>
-                Mentor for first-generation learners and rural students to dream
-                beyond boundaries.
-              </li>
-              <li>
-                Reach me via <a href="contact.html#speaker">Contact</a> for
-                invited talks.
+                Mentor of Smart India Hackathon team that reached
+                <strong>2018 National Finals at Manipal University.</strong>
               </li>
             </ul>
           </article>
         </div>
-
-        <div class="stats-row">
-          <div class="stat-pill">13+ Years of Teaching</div>
-          <div class="stat-pill">6+ Research Publications</div>
-          <div class="stat-pill">50+ Motivational &amp; Career Talks</div>
-          <div class="stat-pill">Smart India Hackathon Mentor (Finalist 2018)</div>
-          <div class="stat-pill">AICTE QIP PG – AI &amp; DS (IIIT Kottayam)</div>
-          <div class="stat-pill">
-            CS for NEET &amp; Govt Exams • University Nodal Officer • IQAC
-            Coordinator
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-inner">
-        <span>© <span id="year"></span> F. D. Anfinston.</span>
-        <span>
-          Built with HTML, CSS &amp; JS •
-          <a
-            href="https://github.com/anfinston/anfinston-portfolio"
-            target="_blank"
-            rel="noopener"
-            >Source on GitHub</a
-          >
-        </span>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> F. D. Anfinston.</div>
+      <div class="footer-links">
+        <a href="academics.html">Academics</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Awards &amp; Impact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
