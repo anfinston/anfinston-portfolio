@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("theme-toggle");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
-  // default: light mode. Respect saved preference if exists.
+  // theme: default light, but respect saved preference
   const storedTheme = localStorage.getItem("theme");
   if (storedTheme === "dark") {
     document.body.classList.add("dark-mode");
   }
-
   updateThemeIcon();
 
   if (toggle) {
@@ -26,6 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
       : "🌙";
   }
 
+  // mobile menu
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+  }
+
   // Fade-in animation
   const observer = new IntersectionObserver(
     entries => {
@@ -41,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
-  // Gentle parallax only on desktop (no overlap issues on mobile)
+  // Gentle parallax only on desktop (no overlap on mobile)
   const heroRight = document.querySelector(".hero-right");
   function handleScroll() {
     if (!heroRight) return;
@@ -49,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       heroRight.style.transform = "translateY(0px)";
       return;
     }
-    const offset = window.scrollY * 0.06; // subtle
+    const offset = window.scrollY * 0.06;
     heroRight.style.transform = `translateY(${offset}px)`;
   }
 
