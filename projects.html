@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projects | F. D. Anfinston</title>
+    <meta
+      name="description"
+      content="Selected academic and student projects guided by F. D. Anfinston."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="profile.JPG" type="image/jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-badge">
+            <img src="profile.JPG" alt="F. D. Anfinston" />
+          </div>
+          <div>
+            <div class="logo-text-main">F. D. ANFINSTON</div>
+            <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="academics.html">Academics</a>
+          <a href="projects.html" class="active">Projects</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="contact.html">Contact</a>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="section fade-in">
+        <h1 class="section-title">Projects &amp; Guidance</h1>
+        <p class="section-subtitle">
+          A glimpse of the academic and student projects that reflect my
+          interest in electronics, communication and AI-driven healthcare.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Ph.D. Research Project</h3>
+            <ul class="card-list">
+              <li>
+                AI-based fusion of PET and MRI images for Alzheimer’s disease
+                diagnosis.
+              </li>
+              <li>
+                Uses Transformer Residual U-Net architecture for better feature
+                extraction.
+              </li>
+              <li>
+                Target outcome: robust, clinically useful decision-support
+                system.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Faculty-Guided UG Projects</h3>
+            <ul class="card-list">
+              <li>Smart agriculture and IoT-based monitoring systems</li>
+              <li>Low-cost health monitoring and wearable devices</li>
+              <li>FPGA-based digital signal processing modules</li>
+              <li>Embedded solutions for automation and safety</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <h2 class="section-title">Student Support</h2>
+        <p class="section-subtitle">
+          Helping students convert their ideas into structured, outcome-based
+          projects.
+        </p>
+
+        <div class="card">
+          <div class="page-photo page-photo-right">
+            <div class="photo-circle photo-sm">
+              <img src="profile.JPG" alt="F. D. Anfinston" />
+            </div>
+          </div>
+          <ul class="card-list">
+            <li>Regular project review meetings and checkpoints</li>
+            <li>Guidance in literature survey and problem formulation</li>
+            <li>Support in simulation tools like MATLAB/Xilinx</li>
+            <li>Encouragement to publish in conferences and journals</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> F. D. Anfinston.</span>
+        <span>
+          Projects •
+          <a
+            href="https://github.com/anfinston/anfinston-portfolio"
+            target="_blank"
+            rel="noopener"
+            >Source on GitHub</a
+          >
+        </span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
