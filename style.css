@@ -131,6 +131,31 @@ header {
   color: #9ca3af;
 }
 
+/* menu toggle (hamburger) */
+
+.menu-toggle {
+  display: none;
+  width: 38px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+
+.menu-toggle span {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
 .nav-links {
   display: flex;
   gap: 0.75rem;
@@ -691,6 +716,12 @@ a:hover {
   border-radius: 14px;
   border: 1px solid #d1d5db;
   background: #ffffff;
+  color: #111827;
+}
+
+.contact-grid div a {
+  color: #111827;
+  text-decoration: underline;
 }
 
 /* colourful contact card */
@@ -702,19 +733,10 @@ a:hover {
 }
 
 .card.contact-info p {
-  color: #e5e7eb;
-}
-
-.card.contact-info a {
   color: #f9fafb;
-  text-decoration: underline;
 }
 
-.card.contact-info a:hover {
-  color: #bfdbfe;
-}
-
-/* do not invert colours on hover for this card */
+/* keep text dark inside white boxes even on hover / dark mode */
 .card.contact-info:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-strong);
@@ -722,6 +744,20 @@ a:hover {
   background: linear-gradient(135deg, #2563eb, #14b8a6, #f97316);
   color: #f9fafb;
 }
+
+.card.contact-info .contact-grid div,
+body.dark-mode .card.contact-info .contact-grid div {
+  background: #ffffff;
+  color: #111827;
+  border-color: rgba(226, 232, 240, 0.9);
+}
+
+.card.contact-info .contact-grid div a,
+body.dark-mode .card.contact-info .contact-grid div a {
+  color: #111827;
+}
+
+/* form */
 
 form {
   display: grid;
@@ -847,19 +883,12 @@ body.dark-mode .stats-row .stat-pill {
 body.dark-mode .contact-grid div {
   background: #020617;
   border-color: #374151;
+  color: #e5e7eb;
 }
 
-body.dark-mode footer {
-  background: #020617;
-  border-top-color: #374151;
-}
+/* contact-info gradient card keeps its style already handled */
 
-/* colourful contact card still fine in dark mode */
-body.dark-mode .card.contact-info {
-  border-color: rgba(191, 219, 254, 0.9);
-}
-
-/* ========== Responsive ========== */
+/* ========== Responsive & Mobile Menu ========== */
 
 @media (max-width: 992px) {
   .hero {
@@ -872,10 +901,30 @@ body.dark-mode .card.contact-info {
 }
 
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
   .navbar {
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    left: 0;
+    padding: 0.8rem 1.25rem 1.2rem;
+    background: radial-gradient(circle at top, #020617, #1f2937);
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.7rem;
+    gap: 0.5rem;
+    display: none;
+    z-index: 40;
+  }
+
+  .nav-links.open {
+    display: flex;
   }
 
   main {
