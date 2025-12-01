@@ -1,234 +1,194 @@
-<header class="site-header">
-  <nav class="navbar container">
-    <a href="index.html" class="brand">
-      <div class="brand-avatar">
-        <img src="profile.JPG" alt="F. D. Anfinston" />
-      </div>
-      <div class="brand-text">
-        <div class="brand-name">F. D. ANFINSTON</div>
-        <div class="brand-tagline">ECE • ACADEMICIAN • RESEARCHER</div>
-      </div>
-    </a>
-
-    <!-- Mobile menu button -->
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Links + theme toggle -->
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="experience.html">Experience</a>
-      <a href="academics.html">Academics</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-
-      <button class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-icon">🌙</span>
-      </button>
-    </div>
-  </nav>
-</header>
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Contact | F. D. Anfinston</title>
-    <meta
-      name="description"
-      content="Contact details of F. D. Anfinston for academic discussions, collaborations, invited talks and student mentoring."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="profile.JPG" type="image/jpeg" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <div class="logo-badge">
-            <img src="profile.JPG" alt="F. D. Anfinston" />
-          </div>
-          <div class="logo-text">
-            <div class="logo-text-main">F. D. ANFINSTON</div>
-            <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | F. D. Anfinston</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="profile.JPG" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="brand">
+        <div class="brand-avatar">
+          <img src="profile.JPG" alt="F. D. Anfinston" />
         </div>
+        <div class="brand-text">
+          <div class="brand-name">F. D. ANFINSTON</div>
+          <div class="brand-tagline">ECE • ACADEMICIAN • RESEARCHER</div>
+        </div>
+      </a>
 
-        <button
-          class="nav-toggle"
-          id="nav-toggle"
-          aria-label="Toggle navigation menu"
-        >
-          <span></span><span></span><span></span>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="academics.html">Academics</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html" class="active">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☀️</span>
         </button>
+      </div>
+    </nav>
+  </header>
 
-        <div class="nav-links" id="nav-menu">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="experience.html">Experience</a>
-          <a href="academics.html">Academics</a>
-          <a href="projects.html">Projects</a>
-          <a href="achievements.html">Achievements</a>
-          <a href="contact.html" class="active">Contact</a>
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            aria-label="Toggle light/dark mode"
-          >
-            <span class="theme-icon">🌙</span>
-          </button>
-        </div>
-      </nav>
-    </header>
+  <main>
+    <section class="section">
+      <div class="container fade-section">
+        <header class="section-header">
+          <h1 class="section-title">Get in Touch</h1>
+          <p class="section-subtitle">
+            Reach out for academic discussions, collaborations, invitations or
+            student mentoring.
+          </p>
+        </header>
 
-    <main class="container">
-      <section class="section fade-in contact-section" id="speaker">
-        <h1 class="section-title">Get in Touch</h1>
-        <p class="section-subtitle">
-          Reach out for academic discussions, collaborations, invitations or
-          student mentoring.
-        </p>
+        <div class="contact-wrapper">
+          <!-- Left info card -->
+          <div class="contact-card-shell">
+            <div class="contact-info-card">
+              <div class="contact-header-row">
+                <div class="contact-avatar">
+                  <img src="profile.JPG" alt="F. D. Anfinston" />
+                </div>
+                <div>
+                  <h2 style="margin:0 0 0.35rem;">F. D. Anfinston</h2>
+                  <div class="contact-dept-pill">
+                    Department of ECE • Achariya CET
+                  </div>
+                </div>
+              </div>
 
-        <div class="grid-2">
-          <!-- left card: profile & emails -->
-          <article class="card">
-            <div class="page-photo">
-              <div class="photo-circle photo-sm">
-                <img src="profile.JPG" alt="F. D. Anfinston" />
+              <p class="contact-intro">
+                For official communication, kindly use the institutional mail
+                IDs. For research collaborations, invited talks or student
+                guidance, you may also contact me via my personal email.
+              </p>
+
+              <div class="contact-grid">
+                <div class="contact-grid-item">
+                  <div class="contact-label">Official Mail ID</div>
+                  <a href="mailto:anfinston@achariya.org" class="contact-link">
+                    anfinston@achariya.org
+                  </a>
+                </div>
+
+                <div class="contact-grid-item">
+                  <div class="contact-label">Dept. Mail ID (ECE)</div>
+                  <a href="mailto:ece.acet@achariya.org" class="contact-link">
+                    ece.acet@achariya.org
+                  </a>
+                </div>
+
+                <div class="contact-grid-item">
+                  <div class="contact-label">IQAC Mail ID</div>
+                  <a href="mailto:iqac.acet@achariya.org" class="contact-link">
+                    iqac.acet@achariya.org
+                  </a>
+                </div>
+
+                <div class="contact-grid-item">
+                  <div class="contact-label">Personal Mail ID</div>
+                  <a href="mailto:anfinston@gmail.com" class="contact-link">
+                    anfinston@gmail.com
+                  </a>
+                </div>
+
+                <div class="contact-grid-item">
+                  <div class="contact-label">GitHub</div>
+                  <a href="https://github.com/anfinston" target="_blank" class="contact-link">
+                    github.com/anfinston
+                  </a>
+                </div>
+
+                <div class="contact-grid-item">
+                  <div class="contact-label">Portfolio</div>
+                  <a href="https://anfinston.github.io/anfinston-portfolio" target="_blank" class="contact-link">
+                    anfinston.github.io/anfinston-portfolio
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="department-pill">
-              <span class="pill-label">Department</span>
-              <span class="pill-value">
-                Electronics and Communication Engineering,
-                Achariya College of Engineering Technology (ACET)
-              </span>
-            </div>
-
-            <p class="contact-text">
-              For official communication, kindly use the institutional mail IDs.
-              For research collaborations, invited talks or student guidance, you
-              may also contact me via my personal email.
-            </p>
-
-            <div class="contact-grid">
-              <div class="contact-pill">
-                <span>Official Mail ID</span>
-                <a href="mailto:anfinston@achariya.org"
-                  >anfinston@achariya.org</a
-                >
-              </div>
-              <div class="contact-pill">
-                <span>Dept. Mail ID (ECE)</span>
-                <a href="mailto:ece.acet@achariya.org"
-                  >ece.acet@achariya.org</a
-                >
-              </div>
-              <div class="contact-pill">
-                <span>IQAC Mail ID</span>
-                <a href="mailto:iqac.acet@achariya.org"
-                  >iqac.acet@achariya.org</a
-                >
-              </div>
-              <div class="contact-pill">
-                <span>Personal Mail ID</span>
-                <a href="mailto:anfinston@gmail.com">anfinston@gmail.com</a>
-              </div>
-              <div class="contact-pill">
-                <span>GitHub</span>
-                <a href="https://github.com/anfinston" target="_blank"
-                  >github.com/anfinston</a
-                >
-              </div>
-              <div class="contact-pill">
-                <span>Portfolio</span>
-                <a
-                  href="https://anfinston.github.io/anfinston-portfolio"
-                  target="_blank"
-                  >anfinston.github.io/anfinston-portfolio</a
-                >
-              </div>
-            </div>
-          </article>
-
-          <!-- right card: real mail form -->
-          <article class="card contact-form">
-            <h3>Send a Message</h3>
-            <p class="contact-text">
-              Fill in the details below and click <strong>Send Message</strong>.
-              Your email app will open with the information pre-filled so you
-              can send it directly to me.
+          <!-- Right form -->
+          <div class="contact-form-card">
+            <h2>Send a Message</h2>
+            <p>
+              Fill in the details and click <strong>Send Message</strong>.
+              This will open your email app with the information pre-filled so
+              you can send it directly to me.
             </p>
 
             <form
-              id="contact-form"
-              action="mailto:anfinston@gmail.com"
-              method="POST"
-              enctype="text/plain"
+              action="mailto:anfinston@achariya.org"
+              method="GET"
+              onsubmit="return true;"
             >
-              <div>
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="Name"
-                  class="input"
-                  required
-                />
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="Email"
-                  class="input"
-                  required
-                />
-              </div>
-              <div>
-                <label for="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="Subject"
-                  class="input"
-                  required
-                />
-              </div>
-              <div>
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="Message"
-                  class="input"
-                  required
-                ></textarea>
-              </div>
+              <div class="form-grid">
+                <div class="form-row-2">
+                  <div>
+                    <label class="label" for="name">Name</label>
+                    <input class="input" id="name" name="subject" placeholder="Your name" />
+                  </div>
+                  <div>
+                    <label class="label" for="email">Your Email</label>
+                    <input
+                      class="input"
+                      id="email"
+                      name="body"
+                      placeholder="your@email.com (will appear in the message)"
+                    />
+                  </div>
+                </div>
 
-              <button type="submit" class="btn btn-primary full-width">
-                Send Message
-              </button>
+                <div>
+                  <label class="label" for="topic">Subject</label>
+                  <input
+                    class="input"
+                    id="topic"
+                    placeholder="Talk invite, collaboration, student query…"
+                  />
+                </div>
+
+                <div>
+                  <label class="label" for="message">Message</label>
+                  <textarea
+                    class="textarea"
+                    id="message"
+                    placeholder="Type your message here…"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                  Send Message via Email
+                </button>
+              </div>
             </form>
-          </article>
+          </div>
         </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-inner">
-        <span>© <span id="year"></span> F. D. Anfinston.</span>
-        <span>Contact • Portfolio</span>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> F. D. Anfinston.</div>
+      <div class="footer-links">
+        <a href="academics.html">Academics</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Awards &amp; Impact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
