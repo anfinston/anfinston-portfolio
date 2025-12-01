@@ -212,7 +212,7 @@ img {
   transition: transform var(--transition-med), opacity var(--transition-med);
 }
 
-/* ================= HERO ================= */
+/* ================= HERO (HOME) ================= */
 
 .hero {
   padding-top: 3.5rem;
@@ -414,10 +414,19 @@ img {
   object-fit: cover;
 }
 
+.hero-photo-small {
+  width: 140px;
+  height: 140px;
+}
+
 @media (max-width: 600px) {
   .hero-photo-ring {
     width: 150px;
     height: 150px;
+  }
+  .hero-photo-small {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -487,6 +496,39 @@ img {
   border: 1px solid rgba(148, 163, 184, 0.5);
 }
 
+/* ================= PAGE HERO (inner pages) ================= */
+
+.page-hero {
+  padding-top: 3.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.page-hero-inner {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.page-hero-avatar {
+  justify-self: start;
+}
+
+.page-hero-text h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+
+.page-hero-text p {
+  margin: 0;
+  color: var(--text-soft-strong);
+}
+
+@media (min-width: 768px) {
+  .page-hero-inner {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+}
+
 /* ================= GENERIC CARDS & GRIDS ================= */
 
 .projects-grid,
@@ -531,8 +573,116 @@ img {
   margin-bottom: 0.25rem;
 }
 
-/* ================= CONTACT, FOOTER, etc. ================= */
-/* (kept since other pages use these classes) */
+/* ============== CONTACT PAGE LAYOUT ============== */
+
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+}
+
+.contact-info-card p {
+  margin-top: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.contact-dept-pill {
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card-soft);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+}
+
+.contact-dept-pill span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.contact-dept-pill strong {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.contact-info-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 700px) {
+  .contact-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.contact-pill {
+  border-radius: 18px;
+  padding: 0.75rem 0.9rem;
+  background: var(--bg-card-soft);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+}
+
+.contact-pill h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.82rem;
+}
+
+.contact-pill a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+/* form */
+
+.contact-form-card h2 {
+  margin-top: 0;
+}
+
+.contact-form-text {
+  margin: 0 0 0.9rem;
+  color: var(--text-soft-strong);
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-form label {
+  font-size: 0.86rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-submit {
+  width: fit-content;
+  margin-top: 0.3rem;
+}
+
+/* ================= FOOTER ================= */
 
 .footer {
   padding: 2rem 0 2.4rem;
@@ -574,11 +724,34 @@ img {
     background: rgba(15, 23, 42, 0.06);
   }
 
+  /* gradient hover for all major cards */
   .card:hover,
   .panel-card:hover,
-  .hero-highlight-card:hover {
+  .hero-highlight-card:hover,
+  .contact-pill:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.26);
+    background-image: linear-gradient(135deg, #1d4ed8, #22c55e, #f97316);
+    color: #f9fafb;
+  }
+
+  .card:hover h2,
+  .card:hover h3,
+  .card:hover p,
+  .card:hover li,
+  .panel-card:hover h3,
+  .panel-card:hover p,
+  .panel-card:hover li,
+  .hero-highlight-card:hover h3,
+  .hero-highlight-card:hover p,
+  .contact-pill:hover h3,
+  .contact-pill:hover a {
+    color: #f9fafb;
+  }
+
+  .card:hover .text-link,
+  .panel-card:hover .text-link {
+    color: #e0f2fe;
   }
 }
 
