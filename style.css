@@ -784,3 +784,30 @@ body.dark-mode footer {
     align-items: stretch;
   }
 }
+/* ---- Mobile overlap fix ---- */
+@media (max-width: 600px) {
+
+  /* Stack hero-right cards in one column */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Add spacing below hero-right panel */
+  .hero-right {
+    margin-bottom: 2rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* Prevent cards from clipping or overlapping */
+  .hero-right, .hero-left {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Ensure next sections start below */
+  main > section,
+  .section {
+    margin-top: 2rem !important;
+  }
+
+}
