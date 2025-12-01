@@ -1,107 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Projects | F. D. Anfinston</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="profile.JPG" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <nav class="navbar container">
-      <a href="index.html" class="brand">
-        <div class="brand-avatar">
-          <img src="profile.JPG" alt="F. D. Anfinston" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projects &amp; Initiatives | F. D. Anfinston</title>
+    <meta
+      name="description"
+      content="Key academic, mentoring and digital projects led by F. D. Anfinston."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="profile.JPG" type="image/jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-badge">
+            <img src="profile.JPG" alt="F. D. Anfinston" />
+          </div>
+          <div>
+            <div class="logo-text-main">F. D. ANFINSTON</div>
+            <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
+          </div>
         </div>
-        <div class="brand-text">
-          <div class="brand-name">F. D. ANFINSTON</div>
-          <div class="brand-tagline">ECE • ACADEMICIAN • RESEARCHER</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="academics.html">Academics</a>
+          <a href="projects.html" class="active">Projects</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="contact.html">Contact</a>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
         </div>
-      </a>
+      </nav>
+    </header>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="experience.html">Experience</a>
-        <a href="academics.html">Academics</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-          <span class="theme-icon">☀️</span>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="section">
-      <div class="container fade-section">
-        <header class="section-header">
-          <h1 class="section-title">Research &amp; Project Mentoring</h1>
-          <p class="section-subtitle">
-            A mix of my own research work and student projects guided in medical
-            imaging, AI and communication.
-          </p>
-        </header>
-
-        <div class="projects-grid">
-          <article class="card">
-            <h3>AI-Powered Medical Image Fusion</h3>
-            <p>
-              Ongoing research focused on PET/MRI fusion and Alzheimer’s disease
-              classification using transformer-based residual U-Net models.
+    <main class="container">
+      <section class="section fade-in">
+        <div class="page-header">
+          <div class="photo-circle photo-sm">
+            <img src="profile.JPG" alt="F. D. Anfinston" />
+          </div>
+          <div class="page-header-text">
+            <h1 class="section-title">Projects &amp; Initiatives</h1>
+            <p class="section-subtitle">
+              A snapshot of technical, academic and mentoring projects guided
+              over the years.
             </p>
-            <ul class="list-bullets">
-              <li>Works with multimodal image fusion for improved clinical decision making.</li>
-              <li>Emphasis on explainable AI and robust validation metrics.</li>
-              <li>Targets early diagnosis support in neuro-degenerative diseases.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Smart India Hackathon (SIH) – Mentor</h3>
-            <p>
-              Mentored a student team which reached the
-              <strong>2018 National Finals at Manipal University</strong>.
-            </p>
-            <ul class="list-bullets">
-              <li>Guided ideation, problem understanding and solution mapping.</li>
-              <li>Supported team in prototyping, presentation and final pitching.</li>
-              <li>Promoted teamwork, innovation and time-bound problem solving.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Selected Student Projects Mentored</h3>
-            <ul class="list-bullets">
-              <li>IoT-based smart health monitoring and alert systems.</li>
-              <li>Wireless sensor networks and communication experiments.</li>
-              <li>Image processing projects for medical and industrial use cases.</li>
-              <li>AI-enabled assistive tools for students and teachers.</li>
-            </ul>
-          </article>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> F. D. Anfinston.</div>
-      <div class="footer-links">
-        <a href="academics.html">Academics</a>
-        <a href="achievements.html">Awards &amp; Impact</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Smart India Hackathon Project</h3>
+            <p class="card-meta">Mentor • National Finalist – 2018, Manipal</p>
+            <ul class="card-list">
+              <li>
+                Mentored a student team that reached the
+                <strong>Smart India Hackathon 2018 national finals</strong> at
+                <strong>Manipal University</strong>.
+              </li>
+              <li>
+                Guided students in problem analysis, solution design and
+                presentation skills.
+              </li>
+              <li>
+                Helped the team align their solution to real-time industry and
+                societal needs.
+              </li>
+            </ul>
+          </div>
 
-  <script src="script.js"></script>
-</body>
+          <div class="card">
+            <h3>Student Projects in ECE</h3>
+            <p class="card-meta">UG Project Guidance • Multiple Batches</p>
+            <ul class="card-list">
+              <li>Digital electronics and VLSI-based projects.</li>
+              <li>Embedded and microcontroller-based systems.</li>
+              <li>Communication and wireless projects.</li>
+              <li>Introductory AI/ML and IoT mini-projects.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <h2 class="section-title">Digital &amp; Academic Initiatives</h2>
+        <p class="section-subtitle">
+          Building systems and resources that support students and the
+          department.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Personal Portfolio &amp; GitHub Presence</h3>
+            <ul class="card-list">
+              <li>
+                Developed a personal academic portfolio hosted on
+                <strong>GitHub Pages</strong>:
+                <a
+                  href="https://anfinston.github.io/anfinston-portfolio"
+                  target="_blank"
+                  rel="noopener"
+                  >anfinston.github.io/anfinston-portfolio</a
+                >.
+              </li>
+              <li>
+                Showcases teaching profile, research interests and achievements
+                for students, peers and collaborators.
+              </li>
+              <li>
+                Demonstrates how faculty can use open-source tools for academic
+                branding and transparent communication.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Departmental Initiatives</h3>
+            <ul class="card-list">
+              <li>
+                Involved in creating guidelines and resources for
+                <strong>ECE departmental GitHub repositories</strong> for
+                project submissions.
+              </li>
+              <li>
+                Encourages students to document their work in a professional and
+                industry-ready manner.
+              </li>
+              <li>
+                Supports outcome-based education by mapping projects to
+                curriculum and industry requirements.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <h2 class="section-title">Value-Added Trainings</h2>
+        <p class="section-subtitle">
+          Training the students to meet industry expectations from 3rd to 8th
+          semester.
+        </p>
+
+        <div class="card">
+          <ul class="card-list">
+            <li>
+              Coordinating value-added training programmes in core electronics,
+              embedded systems and communication.
+            </li>
+            <li>
+              Supporting AI, Data Science and programming-related trainings that
+              align with modern industry needs.
+            </li>
+            <li>
+              Guiding students to take part in online courses, FDPs and
+              certification programmes for continuous upskilling.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> F. D. Anfinston.</span>
+        <span>
+          Projects •
+          <a
+            href="https://github.com/anfinston/anfinston-portfolio"
+            target="_blank"
+            rel="noopener"
+            >Source on GitHub</a
+          >
+        </span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
