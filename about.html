@@ -5,7 +5,7 @@
     <title>About | F. D. Anfinston</title>
     <meta
       name="description"
-      content="Profile of F. D. Anfinston – HoD (ECE), researcher in medical image fusion and AI, mentor and academic leader."
+      content="Profile of F. D. Anfinston – HoD (ECE), IQAC coordinator, researcher in medical image fusion and AI, mentor and academic leader."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="profile.JPG" type="image/jpeg" />
@@ -18,12 +18,21 @@
           <div class="logo-badge">
             <img src="profile.JPG" alt="F. D. Anfinston" />
           </div>
-          <div>
+          <div class="logo-text">
             <div class="logo-text-main">F. D. ANFINSTON</div>
             <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
           </div>
         </div>
-        <div class="nav-links">
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-menu">
           <a href="index.html">Home</a>
           <a href="about.html" class="active">About</a>
           <a href="experience.html">Experience</a>
@@ -31,7 +40,11 @@
           <a href="projects.html">Projects</a>
           <a href="achievements.html">Achievements</a>
           <a href="contact.html">Contact</a>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle light/dark mode"
+          >
             <span class="theme-icon">🌙</span>
           </button>
         </div>
@@ -62,8 +75,15 @@
               projects and coordinated institutional initiatives.
             </p>
             <p>
+              I also contribute as
+              <strong>IQAC Coordinator</strong>, supporting NAAC-related
+              documentation, AQAR preparation and internal quality audits,
+              helping the institution strengthen its quality culture.
+            </p>
+            <p>
               My research interests are in
-              <strong>AI-powered medical imaging, image fusion and deep learning.</strong>
+              <strong>AI-powered medical imaging, image fusion and deep
+                learning.</strong>
               I am pursuing my Ph.D. at Puducherry Technological University with
               focus on PET/MRI fusion and Alzheimer’s disease classification.
             </p>
@@ -77,7 +97,8 @@
             <h3>Leadership Identity</h3>
             <p>
               I am recognized within my institution as a
-              <strong>“Difference Maker – Phenomenal leader with good moral values.”</strong>
+              <strong>“Difference Maker – Phenomenal leader with good moral
+                values.”</strong>
             </p>
             <p>
               I believe that engineering education must combine
