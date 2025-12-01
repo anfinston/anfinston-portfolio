@@ -1,123 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Achievements | F. D. Anfinston</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="profile.JPG" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <nav class="navbar container">
-      <a href="index.html" class="brand">
-        <div class="brand-avatar">
-          <img src="profile.JPG" alt="F. D. Anfinston" />
-        </div>
-        <div class="brand-text">
-          <div class="brand-name">F. D. ANFINSTON</div>
-          <div class="brand-tagline">ECE • ACADEMICIAN • RESEARCHER</div>
-        </div>
-      </a>
-
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="experience.html">Experience</a>
-        <a href="academics.html">Academics</a>
-        <a href="projects.html">Projects</a>
-        <a href="achievements.html" class="active">Achievements</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-          <span class="theme-icon">☀️</span>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="section">
-      <div class="container fade-section">
-        <header class="section-header">
-          <h1 class="section-title">Achievements &amp; Impact</h1>
-          <p class="section-subtitle">
-            Recognitions, awards and outreach that highlight my work as a
-            teacher, leader and mentor.
-          </p>
-        </header>
-
-        <div class="achievements-grid">
-          <article class="card">
-            <h2>Major Awards</h2>
-            <ul class="timeline">
-              <li class="timeline-item">
-                <strong>Naneri Aasiriyar Award – 2024</strong><br />
-                Conferred by <strong>Madurai Ilakiya Manram</strong> for
-                contribution to value-based education and student development.
-              </li>
-              <li class="timeline-item">
-                <strong>Outstanding Teacher &amp; Mentor</strong><br />
-                Recognised at institutional level for consistent student
-                outcomes, discipline and mentoring support.
-              </li>
-              <li class="timeline-item">
-                <strong>Difference Maker – Phenomenal Leader</strong><br />
-                Tag line from management recognising leadership with strong
-                moral values and team coordination.
-              </li>
-              <li class="timeline-item">
-                <strong>Smart India Hackathon – Finalist Mentor</strong><br />
-                Guided student team to the 2018 SIH National finals at Manipal
-                University.
-              </li>
-            </ul>
-          </article>
-
-          <div class="academics-secondary">
-            <article class="card">
-              <h3>Academic &amp; Outreach Impact</h3>
-              <ul class="list-bullets">
-                <li>Organised multiple national &amp; department-level symposiums, workshops and events as HoD / convenor.</li>
-                <li>Delivered career guidance and motivational talks in 50+ schools and colleges.</li>
-                <li>Guided several batches for project expo, paper presentation and innovation challenges.</li>
-                <li>Actively supports rural and first-generation learners entering engineering streams.</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <h3>Leadership Recognition</h3>
-              <p>
-                Known for calm, organised and value-driven leadership style.
-                Frequently entrusted with cross-functional responsibilities:
-              </p>
-              <ul class="list-bullets">
-                <li>IQAC Coordinator for NAAC preparations and audits.</li>
-                <li>Controller of Examinations / Exam Cell Lead.</li>
-                <li>Chief Superintendent / CS for NEET &amp; other Govt. exams.</li>
-                <li>University Nodal Officer and documentation lead.</li>
-              </ul>
-            </article>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Achievements | F. D. Anfinston</title>
+    <meta
+      name="description"
+      content="Awards, recognitions and key achievements of F. D. Anfinston, HoD–ECE at Achariya College of Engineering Technology."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="profile.JPG" type="image/jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER (with Achievements active) -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-badge">
+            <img src="profile.JPG" alt="F. D. Anfinston" />
+          </div>
+          <div>
+            <div class="logo-text-main">F. D. ANFINSTON</div>
+            <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> F. D. Anfinston.</div>
-      <div class="footer-links">
-        <a href="academics.html">Academics</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-  <script src="script.js"></script>
-</body>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="academics.html">Academics</a>
+          <a href="projects.html">Projects</a>
+          <a href="achievements.html" class="active">Achievements</a>
+          <a href="contact.html">Contact</a>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="section fade-in">
+        <div class="page-header">
+          <div class="photo-circle photo-sm">
+            <img src="profile.JPG" alt="F. D. Anfinston" />
+          </div>
+          <div class="page-header-text">
+            <h1 class="section-title">Awards &amp; Achievements</h1>
+            <p class="section-subtitle">
+              Recognitions, leadership milestones and contributions as a teacher
+              and academic leader.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Major Awards</h3>
+            <ul class="card-list">
+              <li>
+                <strong>Naneri Aasiriyar Award (2024)</strong> from
+                <strong>Madurai Ilakkiya Mantram</strong> for value-based
+                teaching and student mentoring.
+              </li>
+              <li>
+                <strong>Outstanding Young Professor Award</strong> – ESN
+                Publication.
+              </li>
+              <li>
+                <strong>Star of the Year – Achariya CET</strong> for overall
+                contribution towards academics &amp; institution building.
+              </li>
+              <li>
+                <strong>Dronachariya Award – Achariya CET</strong> for
+                consistent student mentoring and department development.
+              </li>
+              <li>
+                Recognised by management as a
+                <strong>“Difference Maker – Phenomenal leader with good moral
+                  values.”</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Academic Excellence</h3>
+            <ul class="card-list">
+              <li>
+                Successfully completed
+                <strong>
+                  AICTE Sponsored QIP PG Course in Artificial Intelligence &amp;
+                  Data Science
+                </strong>
+                at <strong>IIIT Kottayam</strong>, making me
+                <strong>eligible to handle AI &amp; DS subjects as per AICTE
+                  norms</strong>.
+              </li>
+              <li><strong>6+</strong> research publications.</li>
+              <li><strong>15+ FDPs</strong> completed.</li>
+              <li><strong>20+ workshops</strong> and <strong>15+ seminars</strong> attended.</li>
+              <li><strong>60+ webinars</strong> in emerging technologies.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <h2 class="section-title">Mentoring &amp; Student Success</h2>
+        <p class="section-subtitle">
+          Guiding students beyond the syllabus through real-time opportunities.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Hackathons &amp; Projects</h3>
+            <ul class="card-list">
+              <li>
+                <strong>Smart India Hackathon Mentor</strong> – mentored a
+                student team that reached the
+                <strong>2018 national finals at Manipal University</strong>.
+              </li>
+              <li>
+                Guided multiple batches in mini-projects, product development
+                and innovation challenges.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Motivational &amp; Career Guidance Speaker</h3>
+            <ul class="card-list">
+              <li>
+                Delivered <strong>50+ motivational and career guidance sessions</strong>
+                in schools and colleges.
+              </li>
+              <li>
+                Sessions focus on discipline, values, higher education planning
+                and choosing the right career path.
+              </li>
+              <li>
+                Frequently invited as speaker for student orientation and value
+                education programmes.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <h2 class="section-title">Leadership &amp; Administrative Roles</h2>
+        <p class="section-subtitle">
+          Trusted responsibilities at institution and university level.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Examination &amp; University Roles</h3>
+            <ul class="card-list">
+              <li>
+                <strong>Controller of Examinations (Internal)</strong> – managed
+                academic exam processes.
+              </li>
+              <li>
+                Acted as <strong>Chief Superintendent (CS) for NEET</strong> and
+                several Government recruitment exams hosted in the campus.
+              </li>
+              <li>
+                <strong>Nodal Officer for University</strong> – coordinated
+                exam-related communications and inspections.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Team Leadership</h3>
+            <ul class="card-list">
+              <li>
+                Convenor / HoD for multiple national-level technical symposiums
+                and intra-college fests.
+              </li>
+              <li>
+                Organised numerous technical workshops, seminars and hands-on
+                trainings in the ECE department.
+              </li>
+              <li>
+                Known as a <strong>strong team leader</strong>, guiding faculty
+                and students with discipline and empathy.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <h2 class="section-title">Impact Snapshot</h2>
+        <p class="section-subtitle">Quick overview of the journey so far.</p>
+
+        <div class="card">
+          <ul class="card-list">
+            <li>13+ years of teaching and academic leadership.</li>
+            <li>HoD (ECE) with strong exam, IQAC and NAAC responsibilities.</li>
+            <li>AICTE QIP PG certified in AI &amp; Data Science (IIIT Kottayam).</li>
+            <li>50+ motivational and career talks delivered.</li>
+            <li>Multiple institutional awards and recognitions.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> F. D. Anfinston.</span>
+        <span>
+          Achievements •
+          <a
+            href="https://github.com/anfinston/anfinston-portfolio"
+            target="_blank"
+            rel="noopener"
+            >Source on GitHub</a
+          >
+        </span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
