@@ -5,7 +5,7 @@
     <title>Projects | F. D. Anfinston</title>
     <meta
       name="description"
-      content="Selected academic and student projects guided by F. D. Anfinston."
+      content="Research and academic projects mentored or led by F. D. Anfinston in image fusion, AI and ECE domains."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="profile.JPG" type="image/jpeg" />
@@ -31,11 +31,7 @@
           <a href="projects.html" class="active">Projects</a>
           <a href="achievements.html">Achievements</a>
           <a href="contact.html">Contact</a>
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            aria-label="Toggle theme"
-          >
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
             <span class="theme-icon">🌙</span>
           </button>
         </div>
@@ -44,93 +40,65 @@
 
     <main class="container">
       <section class="section fade-in">
-        <h1 class="section-title">Projects &amp; Guidance</h1>
+        <h1 class="section-title">Research &amp; Project Mentoring</h1>
         <p class="section-subtitle">
-          A glimpse of the academic and student projects that reflect my
-          interest in electronics, communication and AI-driven healthcare.
+          A mix of my own research work and student projects guided in medical
+          imaging, AI and communication.
         </p>
 
         <div class="grid-2">
-          <div class="card">
-            <h3>Ph.D. Research Project</h3>
+          <article class="card">
+            <h3>AI-Powered Medical Image Fusion</h3>
+            <p>
+              Ongoing research focused on PET/MRI fusion and Alzheimer’s disease
+              classification using transformer-based residual U-Net models.
+            </p>
             <ul class="card-list">
               <li>
-                AI-based fusion of PET and MRI images for Alzheimer’s disease
-                diagnosis.
+                Works with multimodal image fusion for improved clinical
+                decision making.
               </li>
               <li>
-                Uses Transformer Residual U-Net architecture for better feature
-                extraction.
-              </li>
-              <li>
-                Target outcome: robust, clinically useful decision-support
-                system.
+                Emphasis on explainable AI and robust validation metrics in
+                medical imaging.
               </li>
             </ul>
-          </div>
+          </article>
 
-          <div class="card">
-            <h3>Student Project Themes</h3>
+          <article class="card">
+            <h3>Smart India Hackathon (SIH) – Mentor</h3>
+            <p>
+              Mentored a student team which reached the
+              <strong>2018 National Finals</strong> at Manipal University.
+            </p>
             <ul class="card-list">
-              <li>Smart agriculture and IoT-based monitoring systems</li>
-              <li>Low-cost health monitoring and wearable devices</li>
-              <li>FPGA-based digital signal processing modules</li>
-              <li>Embedded solutions for automation and safety</li>
+              <li>Guided ideation, problem understanding and solution mapping.</li>
+              <li>
+                Helped the team in prototyping, presentation and final pitching.
+              </li>
             </ul>
-          </div>
+          </article>
         </div>
-      </section>
 
-      <section class="section fade-in">
-        <h2 class="section-title">Innovation &amp; Hackathons</h2>
-        <p class="section-subtitle">
-          Guiding students to present their ideas at national platforms.
-        </p>
-
-        <div class="card">
-          <div class="page-photo page-photo-right">
-            <div class="photo-circle photo-sm">
-              <img src="profile.JPG" alt="F. D. Anfinston" />
-            </div>
-          </div>
+        <article class="card">
+          <h3>Selected Student Projects Mentored</h3>
           <ul class="card-list">
-            <li>
-              Mentor for <strong>Smart India Hackathon</strong> teams,
-              encouraging problem-solving using real-time industry problem
-              statements.
-            </li>
-            <li>
-              In 2018, guided a student batch that reached the
-              <strong>national finals at Manipal University</strong> in Smart
-              India Hackathon.
-            </li>
-            <li>
-              Continuous support for project documentation, presentation and
-              demonstration skills.
-            </li>
+            <li>IoT-based smart health monitoring and alert systems.</li>
+            <li>Wireless sensor networks and communication experiments.</li>
+            <li>Image processing projects for medical and industrial use cases.</li>
+            <li>AI-enabled assistive tools for students and teachers.</li>
           </ul>
-        </div>
+        </article>
       </section>
     </main>
 
     <footer>
       <div class="footer-inner">
         <span>© <span id="year"></span> F. D. Anfinston.</span>
-        <span>
-          Projects •
-          <a
-            href="https://github.com/anfinston/anfinston-portfolio"
-            target="_blank"
-            rel="noopener"
-            >Source on GitHub</a
-          >
-        </span>
+        <span>Projects • Portfolio</span>
       </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
