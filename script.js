@@ -1,74 +1,57 @@
-// script.js
-document.addEventListener("DOMContentLoaded", function () {
-  /* ---------- YEAR IN FOOTER ---------- */
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("theme-toggle");
+
+  // default: light mode. Respect saved preference if exists.
+  const storedTheme = localStorage.getItem("theme");
+  if (storedTheme === "dark") {
+    document.body.classList.add("dark-mode");
   }
 
-  /* ---------- THEME TOGGLE (LIGHT / DARK) ---------- */
-  const root = document.documentElement;
-  const themeToggle = document.querySelector(".theme-toggle");
-  const themeIcon = document.querySelector(".theme-icon");
+  updateThemeIcon();
 
-  function applyTheme(mode) {
-    if (mode === "dark") {
-      root.classList.add("dark-theme");
-      if (themeIcon) themeIcon.textContent = "🌙";
-    } else {
-      root.classList.remove("dark-theme");
-      if (themeIcon) themeIcon.textContent = "☀️";
-    }
-  }
-
-  const savedTheme = localStorage.getItem("theme") || "light";
-  applyTheme(savedTheme);
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const isDarkNow = root.classList.toggle("dark-theme");
-      const mode = isDarkNow ? "dark" : "light";
-      localStorage.setItem("theme", mode);
-      if (themeIcon) themeIcon.textContent = isDarkNow ? "🌙" : "☀️";
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      updateThemeIcon();
     });
   }
 
-  /* ---------- MOBILE NAV TOGGLE ---------- */
-  const navToggle = document.querySelector(".nav-toggle");
-  const navMenu = document.querySelector(".nav-links");
+  function updateThemeIcon() {
+    const span = document.querySelector(".theme-icon");
+    if (!span) return;
+    span.textContent = document.body.classList.contains("dark-mode")
+      ? "☀️"
+      : "🌙";
+  }
 
-  if (navToggle && navMenu) {
-    navToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("open");
-      navToggle.classList.toggle("active");
-    });
-
-    navMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
-        navToggle.classList.remove("active");
+  // Fade-in animation
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
       });
-    });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+  // Gentle parallax only on desktop (no overlap issues on mobile)
+  const heroRight = document.querySelector(".hero-right");
+  function handleScroll() {
+    if (!heroRight) return;
+    if (window.innerWidth < 768) {
+      heroRight.style.transform = "translateY(0px)";
+      return;
+    }
+    const offset = window.scrollY * 0.06; // subtle
+    heroRight.style.transform = `translateY(${offset}px)`;
   }
 
-  /* ---------- SIMPLE FADE-IN ON SCROLL ---------- */
-  const fadeEls = document.querySelectorAll(".fade-section, .card, .hero-main");
-
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.18 }
-    );
-
-    fadeEls.forEach((el) => observer.observe(el));
-  } else {
-    fadeEls.forEach((el) => el.classList.add("visible"));
-  }
+  window.addEventListener("scroll", handleScroll, { passive: true });
 });
