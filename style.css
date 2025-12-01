@@ -505,7 +505,7 @@ a:hover {
   border: 1px solid #d1d5db;
   box-shadow: var(--shadow-soft);
   transition: transform 0.25s ease, box-shadow 0.25s ease,
-    border-color 0.25s ease, background 0.25s ease;
+    border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 
 /* gradient border on hover */
@@ -525,6 +525,15 @@ a:hover {
   box-shadow: var(--shadow-strong);
   border-color: transparent;
   background: #ffffff;
+  color: var(--text);              /* ensure text stays dark on hover */
+}
+
+.card:hover .card-list {
+  color: var(--text);
+}
+
+.card:hover a {
+  color: var(--primary-dark);      /* keep links readable on hover */
 }
 
 .card:hover::before {
@@ -552,7 +561,7 @@ a:hover {
   margin-bottom: 0.25rem;
 }
 
-/* ========== Timeline (About / Experience / Achievements) ========== */
+/* ========== Timeline ========== */
 
 .timeline {
   display: flex;
@@ -619,10 +628,10 @@ a:hover {
 
 .contact-info p {
   font-size: 0.9rem;
-  color: var(--muted);
   margin-bottom: 0.6rem;
 }
 
+/* gradient heading pill */
 .contact-pill {
   font-size: 0.9rem;
   padding: 0.4rem 0.7rem;
@@ -655,6 +664,38 @@ a:hover {
   border: 1px solid #d1d5db;
   background: #ffffff;
 }
+
+/* ---- SPECIAL: keep text clearly visible on colourful contact card ---- */
+
+.card.contact-info {
+  background: linear-gradient(135deg, #2563eb, #14b8a6, #f97316);
+  border-color: rgba(191, 219, 254, 0.9);
+  color: #f9fafb;
+}
+
+.card.contact-info p {
+  color: #e5e7eb;
+}
+
+.card.contact-info a {
+  color: #f9fafb;
+  text-decoration: underline;
+}
+
+.card.contact-info a:hover {
+  color: #bfdbfe;
+}
+
+/* do not invert colours on hover for this card */
+.card.contact-info:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: rgba(191, 219, 254, 1);
+  background: linear-gradient(135deg, #2563eb, #14b8a6, #f97316);
+  color: #f9fafb;
+}
+
+/* --------------------------------------------------------------------- */
 
 form {
   display: grid;
@@ -764,6 +805,7 @@ body.dark-mode .hero-subtitle {
 body.dark-mode .card {
   background: #020617;
   border-color: #374151;
+  color: #e5e7eb;
 }
 
 body.dark-mode .card-list {
@@ -784,6 +826,11 @@ body.dark-mode .contact-grid div {
 body.dark-mode footer {
   background: #020617;
   border-top-color: #374151;
+}
+
+/* keep colourful contact card readable in dark mode too */
+body.dark-mode .card.contact-info {
+  border-color: rgba(191, 219, 254, 0.9);
 }
 
 /* ========== Responsive ========== */
