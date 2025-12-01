@@ -15,9 +15,9 @@
   --card-bg: #ffffff;
   --text: #0f172a;
   --muted: #6b7280;
-  --border-radius: 18px;
   --shadow-soft: 0 14px 35px rgba(15, 23, 42, 0.12);
   --shadow-strong: 0 22px 45px rgba(15, 23, 42, 0.25);
+  --border-radius: 18px;
   --max-width: 1100px;
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -129,6 +129,7 @@ header {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-links a {
@@ -155,7 +156,30 @@ header {
   border-color: transparent;
 }
 
-/* ========== Global Links ========== */
+/* Theme toggle button */
+
+.theme-toggle {
+  margin-left: 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.7);
+  color: #e5e7eb;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(30, 64, 175, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.6);
+}
+
+/* ========== Links ========== */
 
 a {
   color: var(--primary-dark);
@@ -165,7 +189,7 @@ a:hover {
   color: #1e40af;
 }
 
-/* ========== Hero Section (Home) ========== */
+/* ========== Hero Section ========== */
 
 .hero {
   display: grid;
@@ -236,7 +260,6 @@ a:hover {
   max-width: 34rem;
 }
 
-/* Experience—Domain—Contact row */
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -265,7 +288,7 @@ a:hover {
   margin-top: 1.1rem;
 }
 
-/* ========== HERO RIGHT PANEL (dark cards) ========== */
+/* RIGHT hero panel (parallax + cards) */
 
 .hero-right {
   padding: 1.8rem 1.5rem;
@@ -276,6 +299,7 @@ a:hover {
   color: #e5e7eb;
   position: relative;
   overflow: hidden;
+  will-change: transform;
 }
 
 .hero-right::before {
@@ -328,7 +352,7 @@ a:hover {
   color: #e5e7eb;
 }
 
-/* ✔️ FIX FOR INVISIBLE TEXT IN HERO CARD LISTS */
+/* ensure list text visible in hero cards */
 .hero-card .card-list {
   margin-top: 0.4rem;
   font-size: 0.82rem;
@@ -344,7 +368,6 @@ a:hover {
   font-weight: 600;
 }
 
-/* Chips inside hero cards */
 .hero-chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -401,7 +424,7 @@ a:hover {
   transform: translateY(-1px);
 }
 
-/* ========== Sections & Cards (other pages) ========== */
+/* ========== Sections & Cards ========== */
 
 .section {
   margin-top: 2.75rem;
@@ -436,7 +459,7 @@ a:hover {
     border-color 0.25s ease, background 0.25s ease;
 }
 
-/* Gradient border trick on hover */
+/* gradient border on hover */
 .card::before {
   content: "";
   position: absolute;
@@ -464,16 +487,9 @@ a:hover {
   margin-bottom: 0.25rem;
 }
 
-.card h4 {
-  font-size: 0.9rem;
-  color: #111827;
-  margin-bottom: 0.2rem;
-}
-
 .card-meta {
   font-size: 0.8rem;
   color: var(--muted);
-  margin-bottom: 0.3rem;
 }
 
 .card-list {
@@ -487,7 +503,7 @@ a:hover {
   margin-bottom: 0.25rem;
 }
 
-/* ========== Timeline Lists (About / Experience / Awards) ========== */
+/* ========== Timeline ========== */
 
 .timeline {
   display: flex;
@@ -526,17 +542,7 @@ a:hover {
   display: none;
 }
 
-.timeline-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.timeline-meta {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-/* ========== Stats pills (home bottom row) ========== */
+/* ========== Stats pills (home) ========== */
 
 .stats-row {
   display: flex;
@@ -601,8 +607,6 @@ a:hover {
   background: #ffffff;
 }
 
-/* Form styling */
-
 form {
   display: grid;
   gap: 0.8rem;
@@ -611,7 +615,6 @@ form {
 label {
   font-size: 0.8rem;
   color: var(--muted);
-  margin-bottom: 0.2rem;
 }
 
 input,
@@ -639,6 +642,19 @@ textarea {
   resize: vertical;
 }
 
+/* ========== Fade-in animation ========== */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ========== Footer ========== */
 
 footer {
@@ -664,8 +680,61 @@ footer {
   text-decoration: underline;
 }
 
-.footer-inner a:hover {
-  color: #1e3a8a;
+/* ========== DARK MODE OVERRIDES ========== */
+
+body.dark-mode {
+  background:
+    radial-gradient(circle at top left, #0f172a 0, transparent 55%),
+    radial-gradient(circle at bottom right, #020617 0, transparent 55%),
+    #020617;
+  color: #e5e7eb;
+}
+
+body.dark-mode header {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.98),
+    rgba(31, 41, 55, 0.97),
+    rgba(30, 64, 175, 0.95)
+  );
+}
+
+body.dark-mode .hero-left {
+  background: radial-gradient(circle at top, #111827, #020617 70%);
+  border-color: rgba(55, 65, 81, 0.9);
+}
+
+body.dark-mode .hero-title {
+  color: #f9fafb;
+}
+
+body.dark-mode .hero-subtitle {
+  color: #e5e7eb;
+}
+
+body.dark-mode .card {
+  background: #020617;
+  border-color: #374151;
+}
+
+body.dark-mode .card-list {
+  color: #e5e7eb;
+}
+
+body.dark-mode .stats-row .stat-pill {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+body.dark-mode .contact-grid div {
+  background: #020617;
+  border-color: #374151;
+}
+
+body.dark-mode footer {
+  background: #020617;
+  border-top-color: #374151;
 }
 
 /* ========== Responsive ========== */
