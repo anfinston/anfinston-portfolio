@@ -1,168 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Contact | F. D. Anfinston</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="profile.JPG" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <nav class="navbar container">
-      <a href="index.html" class="brand">
-        <div class="brand-avatar">
-          <img src="profile.JPG" alt="F. D. Anfinston" />
-        </div>
-        <div class="brand-text">
-          <div class="brand-name">F. D. ANFINSTON</div>
-          <div class="brand-tagline">ECE • ACADEMICIAN • RESEARCHER</div>
-        </div>
-      </a>
-
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="experience.html">Experience</a>
-        <a href="academics.html">Academics</a>
-        <a href="projects.html">Projects</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="contact.html" class="active">Contact</a>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-          <span class="theme-icon">☀️</span>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- PAGE HERO -->
-    <section class="section page-hero">
-      <div class="container page-hero-inner">
-        <div class="page-hero-avatar">
-          <div class="hero-photo-ring hero-photo-small">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact | F. D. Anfinston</title>
+    <meta
+      name="description"
+      content="Contact information and invitation for talks or collaborations with F. D. Anfinston."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="profile.JPG" type="image/jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-badge">
             <img src="profile.JPG" alt="F. D. Anfinston" />
           </div>
-        </div>
-        <div class="page-hero-text">
-          <h1>Get in Touch</h1>
-          <p>
-            Reach out for academic discussions, collaborations, invitations or
-            student mentoring.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section fade-section">
-      <div class="container contact-grid">
-        <!-- LEFT: CONTACT DETAILS -->
-        <div class="contact-info-card card">
-          <div class="contact-dept-pill">
-            <span>DEPARTMENT</span>
-            <strong>
-              Electronics and Communication Engineering,<br />
-              Achariya College of Engineering Technology (ACET)
-            </strong>
-          </div>
-
-          <p>
-            For official communication, kindly use the institutional mail IDs.
-            For research collaborations, invited talks or student guidance, you
-            may also contact me via my personal email.
-          </p>
-
-          <div class="contact-info-grid">
-            <div class="contact-pill">
-              <h3>Official Mail ID</h3>
-              <a href="mailto:anfinston@achariya.org">anfinston@achariya.org</a>
-            </div>
-            <div class="contact-pill">
-              <h3>Dept. Mail ID (ECE)</h3>
-              <a href="mailto:ece.acet@achariya.org">ece.acet@achariya.org</a>
-            </div>
-            <div class="contact-pill">
-              <h3>IQAC Mail ID</h3>
-              <a href="mailto:iqac.acet@achariya.org">iqac.acet@achariya.org</a>
-            </div>
-            <div class="contact-pill">
-              <h3>Personal Mail ID</h3>
-              <a href="mailto:anfinston@gmail.com">anfinston@gmail.com</a>
-            </div>
-            <div class="contact-pill">
-              <h3>GitHub</h3>
-              <a href="https://github.com/anfinston" target="_blank">
-                github.com/anfinston
-              </a>
-            </div>
-            <div class="contact-pill">
-              <h3>Portfolio</h3>
-              <a href="https://anfinston.github.io/anfinston-portfolio" target="_blank">
-                anfinston.github.io/anfinston-portfolio
-              </a>
-            </div>
+          <div>
+            <div class="logo-text-main">F. D. ANFINSTON</div>
+            <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
           </div>
         </div>
-
-        <!-- RIGHT: REAL FORM (mailto) -->
-        <div class="card contact-form-card">
-          <h2>Send a Message</h2>
-          <p class="contact-form-text">
-            Fill in the details below and click <strong>Send Message</strong>.
-            Your email app will open with the information pre-filled.
-          </p>
-
-          <form
-            class="contact-form"
-            action="mailto:anfinston@achariya.org"
-            method="post"
-            enctype="text/plain"
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="academics.html">Academics</a>
+          <a href="projects.html">Projects</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="contact.html" class="active">Contact</a>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
           >
-            <label>
-              Name
-              <input type="text" name="name" required />
-            </label>
-
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-
-            <label>
-              Subject
-              <input type="text" name="subject" required />
-            </label>
-
-            <label>
-              Message
-              <textarea name="message" rows="4" required></textarea>
-            </label>
-
-            <button type="submit" class="btn-pill btn-primary contact-submit">
-              Send Message
-            </button>
-          </form>
+            <span class="theme-icon">🌙</span>
+          </button>
         </div>
-      </div>
-    </section>
-  </main>
+      </nav>
+    </header>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> F. D. Anfinston.</div>
-      <div class="footer-links">
-        <a href="academics.html">Academics</a>
-        <a href="projects.html">Projects</a>
-        <a href="achievements.html">Awards &amp; Impact</a>
-      </div>
-    </div>
-  </footer>
+    <main class="container">
+      <section class="section fade-in">
+        <div class="page-header">
+          <div class="photo-circle photo-sm">
+            <img src="profile.JPG" alt="F. D. Anfinston" />
+          </div>
+          <div class="page-header-text">
+            <h1 class="section-title">Contact</h1>
+            <p class="section-subtitle">
+              Reach out for academic collaborations, invited talks, career
+              guidance sessions and student mentoring.
+            </p>
+          </div>
+        </div>
 
-  <script src="script.js"></script>
-</body>
+        <div class="contact-wrapper">
+          <div class="card contact-info">
+            <div class="contact-pill">
+              <span class="label">Preferred Channels</span>
+              <span>Mail • Official / IQAC / Department</span>
+            </div>
+            <p>
+              I am happy to connect regarding department-level activities,
+              student programmes, motivational talks and collaborations in ECE,
+              AI &amp; Data Science.
+            </p>
+
+            <div class="contact-grid">
+              <div>
+                <strong>Official Mail</strong><br />
+                <a href="mailto:anfinston@achariya.org">anfinston@achariya.org</a>
+              </div>
+              <div>
+                <strong>Department Mail (ECE)</strong><br />
+                <a href="mailto:ece.acet@achariya.org">ece.acet@achariya.org</a>
+              </div>
+              <div>
+                <strong>IQAC Mail</strong><br />
+                <a href="mailto:iqac.acet@achariya.org">iqac.acet@achariya.org</a>
+              </div>
+              <div>
+                <strong>Personal Mail</strong><br />
+                <a href="mailto:anfinston@gmail.com">anfinston@gmail.com</a>
+              </div>
+            </div>
+
+            <p style="margin-top: 0.9rem; font-size: 0.9rem">
+              You can also reach me via institutional communication channels for
+              official exam-related or affiliation-related queries.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Send a Message</h3>
+            <p class="card-meta">
+              This will open your email application with my address pre-filled.
+            </p>
+            <form
+              action="mailto:anfinston@achariya.org"
+              method="post"
+              enctype="text/plain"
+            >
+              <div>
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="Name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div>
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="Subject"
+                  placeholder="Eg. Invitation for Guest Lecture"
+                />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="Message"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Email
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> F. D. Anfinston.</span>
+        <span>
+          Contact •
+          <a
+            href="https://github.com/anfinston/anfinston-portfolio"
+            target="_blank"
+            rel="noopener"
+            >Source on GitHub</a
+          >
+        </span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
