@@ -24,8 +24,6 @@ body {
   --primary: #2563eb;
   --primary-dark: #1e40af;
   --accent: #f97316;
-  --blue-mid: #1e3a8a;
-  --blue-soft: #3b82f6;
 
   --bg: #e5edff;
   --bg-soft: #dbeafe;
@@ -64,7 +62,7 @@ body.dark-mode {
 .container {
   width: min(1200px, 92%);
   margin: 0 auto;
-  padding-top: 6.8rem; /* to avoid overlap with fixed navbar */
+  padding-top: 6.8rem; /* avoid navbar overlap */
 }
 
 /* ============================================================
@@ -151,6 +149,10 @@ body.dark-mode {
   justify-content: center;
   cursor: pointer;
   font-size: 1.1rem;
+}
+
+.theme-icon {
+  pointer-events: none;
 }
 
 /* ============================================================
@@ -267,7 +269,7 @@ body.dark-mode {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.01);
   box-shadow: 0 16px 32px rgba(15, 23, 42, 0.5);
 }
 
@@ -281,12 +283,27 @@ body.dark-mode {
   background: #eff6ff;
 }
 
+.btn-outline {
+  background: transparent;
+  border-color: #cbd5f5;
+  color: #1e3a8a;
+}
+
+.btn-outline:hover {
+  background: #eff6ff;
+}
+
+.full-width {
+  width: 100%;
+}
+
 /* ============================================================
    HERO RIGHT — PHOTO + GRID
 ============================================================ */
 
 .hero-right {
   flex: 1 1 40%;
+  will-change: transform;
 }
 
 .hero-photo-wrapper {
@@ -333,6 +350,14 @@ body.dark-mode {
   border: 1px solid rgba(148, 163, 184, 0.4);
   color: #e5e7eb;
   font-size: 0.9rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: rgba(248, 250, 252, 0.9);
 }
 
 .hero-card h3 {
@@ -355,9 +380,13 @@ body.dark-mode {
   font-size: 0.75rem;
 }
 
-/* card list in dark hero cards */
 .hero-card .card-list li {
   color: #e5e7eb;
+}
+
+.tag-inline {
+  font-size: 0.78rem;
+  color: #bfdbfe;
 }
 
 /* ============================================================
@@ -485,14 +514,40 @@ body.dark-mode {
 }
 
 /* ============================================================
-   CONTACT PAGE BASE STYLES
+   CONTACT PAGE
 ============================================================ */
 
 .contact-section {
   margin-top: 3rem;
 }
 
-/* small pills inside left contact card (for each mail / link) */
+.department-pill {
+  margin: 1.2rem 0;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.pill-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.pill-value {
+  display: block;
+  font-size: 0.88rem;
+  margin-top: 0.1rem;
+}
+
+.contact-text {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
 .contact-grid {
   margin-top: 1.2rem;
   display: grid;
@@ -521,7 +576,7 @@ body.dark-mode {
   text-decoration: underline;
 }
 
-/* form inputs on contact page */
+/* form inputs */
 
 .contact-form form {
   margin-top: 1rem;
@@ -556,6 +611,49 @@ textarea {
 textarea:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
+}
+
+/* CONTACT CARDS – white default, gradient on hover */
+
+.contact-section .card {
+  background: #ffffff;
+  color: #020617;
+  box-shadow: var(--shadow-soft);
+  border-radius: 26px;
+  border: 1px solid #d1d5db;
+  transition: background 0.35s ease, box-shadow 0.35s ease,
+    transform 0.25s ease, color 0.25s ease;
+}
+
+.contact-section .card h1,
+.contact-section .card h2,
+.contact-section .card h3,
+.contact-section .card p,
+.contact-section .card span,
+.contact-section .card label,
+.contact-section .card a {
+  color: #020617;
+}
+
+.contact-section .card:hover {
+  background: linear-gradient(135deg, #2563eb, #14b8a6, #f97316);
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-4px);
+}
+
+.contact-section .card:hover h1,
+.contact-section .card:hover h2,
+.contact-section .card:hover h3,
+.contact-section .card:hover p,
+.contact-section .card:hover span,
+.contact-section .card:hover label,
+.contact-section .card:hover a {
+  color: #020617;
+}
+
+/* keep inner small pills white */
+.contact-section .contact-pill {
+  background: #ffffff;
 }
 
 /* ============================================================
@@ -602,7 +700,7 @@ footer {
 
 @media (max-width: 900px) {
   .navbar {
-    padding-inline: 1rem;
+    padding-inline: 1.2rem;
   }
 
   .nav-links {
@@ -639,47 +737,4 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-/* ============================================================
-   CONTACT PAGE CARDS — WHITE DEFAULT, GRADIENT ON HOVER
-   (applies to BOTH left mail-id block & right Send Message form)
-============================================================ */
-
-.contact-section .card {
-  background: #ffffff; /* default white like Academic Engagement card */
-  color: #020617;
-  box-shadow: var(--shadow-soft);
-  border-radius: 26px;
-  border: 1px solid #d1d5db;
-  transition: background 0.35s ease, box-shadow 0.35s ease,
-    transform 0.25s ease, color 0.25s ease;
-}
-
-/* keep text dark in normal state */
-.contact-section .card h1,
-.contact-section .card h2,
-.contact-section .card h3,
-.contact-section .card p,
-.contact-section .card span,
-.contact-section .card label,
-.contact-section .card a {
-  color: #020617;
-}
-
-/* hover = gradient background, dark text (like your Academic Engagement example) */
-.contact-section .card:hover {
-  background: linear-gradient(135deg, #2563eb, #14b8a6, #f97316);
-  box-shadow: var(--shadow-strong);
-  transform: translateY(-4px);
-}
-
-.contact-section .card:hover h1,
-.contact-section .card:hover h2,
-.contact-section .card:hover h3,
-.contact-section .card:hover p,
-.contact-section .card:hover span,
-.contact-section .card:hover label,
-.contact-section .card:hover a {
-  color: #020617;
 }
