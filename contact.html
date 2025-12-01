@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <nav class="navbar container">
       <a href="index.html" class="brand">
@@ -40,139 +41,112 @@
   </header>
 
   <main>
-    <section class="section">
-      <div class="container fade-section">
-        <header class="section-header">
-          <h1 class="section-title">Get in Touch</h1>
-          <p class="section-subtitle">
+    <!-- PAGE HERO -->
+    <section class="section page-hero">
+      <div class="container page-hero-inner">
+        <div class="page-hero-avatar">
+          <div class="hero-photo-ring hero-photo-small">
+            <img src="profile.JPG" alt="F. D. Anfinston" />
+          </div>
+        </div>
+        <div class="page-hero-text">
+          <h1>Get in Touch</h1>
+          <p>
             Reach out for academic discussions, collaborations, invitations or
             student mentoring.
           </p>
-        </header>
+        </div>
+      </div>
+    </section>
 
-        <div class="contact-wrapper">
-          <!-- Left info card -->
-          <div class="contact-card-shell">
-            <div class="contact-info-card">
-              <div class="contact-header-row">
-                <div class="contact-avatar">
-                  <img src="profile.JPG" alt="F. D. Anfinston" />
-                </div>
-                <div>
-                  <h2 style="margin:0 0 0.35rem;">F. D. Anfinston</h2>
-                  <div class="contact-dept-pill">
-                    Department of ECE • Achariya CET
-                  </div>
-                </div>
-              </div>
+    <section class="section fade-section">
+      <div class="container contact-grid">
+        <!-- LEFT: CONTACT DETAILS -->
+        <div class="contact-info-card card">
+          <div class="contact-dept-pill">
+            <span>DEPARTMENT</span>
+            <strong>
+              Electronics and Communication Engineering,<br />
+              Achariya College of Engineering Technology (ACET)
+            </strong>
+          </div>
 
-              <p class="contact-intro">
-                For official communication, kindly use the institutional mail
-                IDs. For research collaborations, invited talks or student
-                guidance, you may also contact me via my personal email.
-              </p>
+          <p>
+            For official communication, kindly use the institutional mail IDs.
+            For research collaborations, invited talks or student guidance, you
+            may also contact me via my personal email.
+          </p>
 
-              <div class="contact-grid">
-                <div class="contact-grid-item">
-                  <div class="contact-label">Official Mail ID</div>
-                  <a href="mailto:anfinston@achariya.org" class="contact-link">
-                    anfinston@achariya.org
-                  </a>
-                </div>
-
-                <div class="contact-grid-item">
-                  <div class="contact-label">Dept. Mail ID (ECE)</div>
-                  <a href="mailto:ece.acet@achariya.org" class="contact-link">
-                    ece.acet@achariya.org
-                  </a>
-                </div>
-
-                <div class="contact-grid-item">
-                  <div class="contact-label">IQAC Mail ID</div>
-                  <a href="mailto:iqac.acet@achariya.org" class="contact-link">
-                    iqac.acet@achariya.org
-                  </a>
-                </div>
-
-                <div class="contact-grid-item">
-                  <div class="contact-label">Personal Mail ID</div>
-                  <a href="mailto:anfinston@gmail.com" class="contact-link">
-                    anfinston@gmail.com
-                  </a>
-                </div>
-
-                <div class="contact-grid-item">
-                  <div class="contact-label">GitHub</div>
-                  <a href="https://github.com/anfinston" target="_blank" class="contact-link">
-                    github.com/anfinston
-                  </a>
-                </div>
-
-                <div class="contact-grid-item">
-                  <div class="contact-label">Portfolio</div>
-                  <a href="https://anfinston.github.io/anfinston-portfolio" target="_blank" class="contact-link">
-                    anfinston.github.io/anfinston-portfolio
-                  </a>
-                </div>
-              </div>
+          <div class="contact-info-grid">
+            <div class="contact-pill">
+              <h3>Official Mail ID</h3>
+              <a href="mailto:anfinston@achariya.org">anfinston@achariya.org</a>
+            </div>
+            <div class="contact-pill">
+              <h3>Dept. Mail ID (ECE)</h3>
+              <a href="mailto:ece.acet@achariya.org">ece.acet@achariya.org</a>
+            </div>
+            <div class="contact-pill">
+              <h3>IQAC Mail ID</h3>
+              <a href="mailto:iqac.acet@achariya.org">iqac.acet@achariya.org</a>
+            </div>
+            <div class="contact-pill">
+              <h3>Personal Mail ID</h3>
+              <a href="mailto:anfinston@gmail.com">anfinston@gmail.com</a>
+            </div>
+            <div class="contact-pill">
+              <h3>GitHub</h3>
+              <a href="https://github.com/anfinston" target="_blank">
+                github.com/anfinston
+              </a>
+            </div>
+            <div class="contact-pill">
+              <h3>Portfolio</h3>
+              <a href="https://anfinston.github.io/anfinston-portfolio" target="_blank">
+                anfinston.github.io/anfinston-portfolio
+              </a>
             </div>
           </div>
+        </div>
 
-          <!-- Right form -->
-          <div class="contact-form-card">
-            <h2>Send a Message</h2>
-            <p>
-              Fill in the details and click <strong>Send Message</strong>.
-              This will open your email app with the information pre-filled so
-              you can send it directly to me.
-            </p>
+        <!-- RIGHT: REAL FORM (mailto) -->
+        <div class="card contact-form-card">
+          <h2>Send a Message</h2>
+          <p class="contact-form-text">
+            Fill in the details below and click <strong>Send Message</strong>.
+            Your email app will open with the information pre-filled.
+          </p>
 
-            <form
-              action="mailto:anfinston@achariya.org"
-              method="GET"
-              onsubmit="return true;"
-            >
-              <div class="form-grid">
-                <div class="form-row-2">
-                  <div>
-                    <label class="label" for="name">Name</label>
-                    <input class="input" id="name" name="subject" placeholder="Your name" />
-                  </div>
-                  <div>
-                    <label class="label" for="email">Your Email</label>
-                    <input
-                      class="input"
-                      id="email"
-                      name="body"
-                      placeholder="your@email.com (will appear in the message)"
-                    />
-                  </div>
-                </div>
+          <form
+            class="contact-form"
+            action="mailto:anfinston@achariya.org"
+            method="post"
+            enctype="text/plain"
+          >
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
 
-                <div>
-                  <label class="label" for="topic">Subject</label>
-                  <input
-                    class="input"
-                    id="topic"
-                    placeholder="Talk invite, collaboration, student query…"
-                  />
-                </div>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
 
-                <div>
-                  <label class="label" for="message">Message</label>
-                  <textarea
-                    class="textarea"
-                    id="message"
-                    placeholder="Type your message here…"
-                  ></textarea>
-                </div>
+            <label>
+              Subject
+              <input type="text" name="subject" required />
+            </label>
 
-                <button type="submit" class="btn-submit">
-                  Send Message via Email
-                </button>
-              </div>
-            </form>
-          </div>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+
+            <button type="submit" class="btn-pill btn-primary contact-submit">
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>
