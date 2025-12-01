@@ -8,6 +8,7 @@
       content="Contact details of F. D. Anfinston – HoD (ECE), Achariya College of Engineering Technology."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="profile.JPG" type="image/jpeg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,8 +19,8 @@
             <img src="profile.JPG" alt="F. D. Anfinston" />
           </div>
           <div>
-            <span>F. D. Anfinston</span><br />
-            <span>ECE • Academician • Researcher</span>
+            <div class="logo-text-main">F. D. ANFINSTON</div>
+            <div class="logo-text-sub">ECE • ACADEMICIAN • RESEARCHER</div>
           </div>
         </div>
         <div class="nav-links">
@@ -27,6 +28,7 @@
           <a href="about.html">About</a>
           <a href="experience.html">Experience</a>
           <a href="academics.html">Academics</a>
+          <a href="projects.html">Projects</a>
           <a href="achievements.html">Achievements</a>
           <a href="contact.html" class="active">Contact</a>
           <button
@@ -51,6 +53,12 @@
         <div class="contact-wrapper">
           <!-- Left: contact info -->
           <div class="card contact-info">
+            <div class="page-photo">
+              <div class="photo-circle photo-sm">
+                <img src="profile.JPG" alt="F. D. Anfinston" />
+              </div>
+            </div>
+
             <div class="contact-pill">
               <span class="label">Department</span>
               <span>
@@ -61,8 +69,8 @@
 
             <p>
               For official communication, kindly use the institutional mail IDs.
-              For personal discussions, research collaborations or guidance, you
-              may also contact me through my personal email.
+              For research collaborations, invited talks or student guidance,
+              you may also contact me via my personal email.
             </p>
 
             <div class="contact-grid" style="margin-top: 0.8rem">
@@ -89,10 +97,6 @@
                 <a href="mailto:anfinston@gmail.com">anfinston@gmail.com</a>
               </div>
               <div>
-                <strong>Mobile</strong><br />
-                <a href="tel:+919488481234">+91 94884 81234</a>
-              </div>
-              <div>
                 <strong>GitHub</strong><br />
                 <a
                   href="https://github.com/anfinston"
@@ -101,12 +105,21 @@
                   >github.com/anfinston</a
                 >
               </div>
+              <div>
+                <strong>Portfolio</strong><br />
+                <a
+                  href="https://anfinston.github.io/anfinston-portfolio"
+                  target="_blank"
+                  rel="noopener"
+                  >anfinston.github.io/anfinston-portfolio</a
+                >
+              </div>
             </div>
           </div>
 
-          <!-- Right: demo form -->
+          <!-- Right: mailto form -->
           <div class="card">
-            <h3 style="margin-bottom: 0.5rem">Quick Message (Demo Form)</h3>
+            <h3 style="margin-bottom: 0.5rem">Send a Message</h3>
             <p
               style="
                 font-size: 0.85rem;
@@ -114,31 +127,33 @@
                 margin-bottom: 0.6rem;
               "
             >
-              This form is a demo display for the portfolio. For real responses,
-              please use the email IDs or phone numbers listed on the left.
+              This form will open your email application with the details you
+              provide. Please ensure your email address is correct before
+              sending.
             </p>
-            <form>
+            <form
+              action="mailto:anfinston@achariya.org"
+              method="post"
+              enctype="text/plain"
+            >
               <div>
                 <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Your name" />
+                <input id="name" name="Name" type="text" required />
               </div>
               <div>
                 <label for="email">Email</label>
-                <input id="email" type="email" placeholder="your@email.com" />
+                <input id="email" name="Email" type="email" required />
               </div>
               <div>
                 <label for="subject">Subject</label>
-                <input id="subject" type="text" placeholder="Subject" />
+                <input id="subject" name="Subject" type="text" />
               </div>
               <div>
                 <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  placeholder="Type your message here..."
-                ></textarea>
+                <textarea id="message" name="Message" required></textarea>
               </div>
-              <button class="btn btn-primary" type="button">
-                Send (Demo Only)
+              <button class="btn btn-primary" type="submit">
+                Open Email &amp; Send
               </button>
             </form>
           </div>
