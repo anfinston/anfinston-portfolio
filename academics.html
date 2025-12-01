@@ -5,7 +5,7 @@
     <title>Academics &amp; Research | F. D. Anfinston</title>
     <meta
       name="description"
-      content="Academic contributions, publications and technical interests of F. D. Anfinston."
+      content="Academic contributions, research interests and technical skills of F. D. Anfinston."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
@@ -27,13 +27,21 @@
           <a href="about.html">About</a>
           <a href="experience.html">Experience</a>
           <a href="academics.html" class="active">Academics</a>
+          <a href="achievements.html">Achievements</a>
           <a href="contact.html">Contact</a>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
         </div>
       </nav>
     </header>
 
     <main class="container">
-      <section class="section">
+      <section class="section fade-in">
         <h1 class="section-title">Academic Contributions</h1>
         <p class="section-subtitle">
           Research interests, publications, programmes attended and technical
@@ -44,7 +52,7 @@
           <div class="card">
             <h3>Research Interests</h3>
             <ul class="card-list">
-              <li>Meta-heuristic algorithms and optimization techniques</li>
+              <li>Meta-heuristic algorithms and optimisation techniques</li>
               <li>Medical image processing and fusion</li>
               <li>Deep learning and AI in healthcare</li>
               <li>Electronic devices, circuits and communication systems</li>
@@ -59,14 +67,13 @@
               <li>Guidance of UG projects and mini-projects</li>
               <li>
                 Contribution to syllabus design and academic planning in ECE
-                (<a href="experience.html">department roles</a>)
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section fade-in">
         <h2 class="section-title">Selected Research Work</h2>
         <p class="section-subtitle">
           Snapshot of research in medical image fusion and AI-based diagnosis.
@@ -78,21 +85,21 @@
             PET &amp; MRI Image Fusion using Transformer Residual U-Net Model
           </p>
           <p style="font-size: 0.9rem; margin-top: 0.3rem">
-            Research work focusing on improving the classification of Alzheimer's
-            Disease by combining PET and MRI images through a Transformer
-            Residual U-Net based fusion pipeline, followed by an adaptive
-            ensemble classifier for robust decision-making. This forms a core
-            part of my Ph.D. research.
+            Ongoing research work focusing on improving the classification of
+            Alzheimer's Disease by combining PET and MRI images through a
+            Transformer Residual U-Net based fusion pipeline, followed by an
+            adaptive ensemble classifier for robust decision-making. This forms
+            a core part of my Ph.D. research.
           </p>
           <ul class="card-list" style="margin-top: 0.6rem">
-            <li>Deep learning-based medical image fusion framework</li>
-            <li>Improved feature extraction from multi-modal images</li>
-            <li>Focus on early diagnosis and accurate classification</li>
+            <li>Deep learning-based multi-modal medical image fusion</li>
+            <li>Improved feature extraction from PET &amp; MRI modalities</li>
+            <li>Focus on early diagnosis and reliable classification</li>
           </ul>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section fade-in">
         <h2 class="section-title">Skills &amp; Tools</h2>
         <p class="section-subtitle">
           Platforms and tools used for teaching, research and administration.
@@ -123,10 +130,10 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">Awards &amp; Honours</h2>
+      <section class="section fade-in">
+        <h2 class="section-title">Recognition</h2>
         <p class="section-subtitle">
-          Recognitions received for academic and teaching excellence.
+          Some of the awards received for academic and teaching excellence.
         </p>
 
         <div class="timeline">
@@ -165,6 +172,7 @@
       </div>
     </footer>
 
+    <script src="script.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
