@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fadeEls.forEach((el) => observer.observe(el));
   } else {
-    // fallback
     fadeEls.forEach((el) => el.classList.add("visible"));
   }
 });
