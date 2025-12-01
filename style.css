@@ -62,7 +62,7 @@ body.dark-mode {
 .container {
   width: min(1200px, 92%);
   margin: 0 auto;
-  padding-top: 6.8rem; /* avoid navbar overlap */
+  padding-top: 6.8rem;
 }
 
 /* ============================================================
@@ -416,7 +416,7 @@ body.dark-mode {
 }
 
 /* ============================================================
-   CARDS
+   CARDS (GLOBAL HOVER LIKE CONTACT)
 ============================================================ */
 
 .card {
@@ -425,12 +425,7 @@ body.dark-mode {
   border: 1px solid rgba(148, 163, 184, 0.45);
   padding: 1.5rem 1.6rem;
   box-shadow: var(--shadow-soft);
-  transition: all 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-strong);
+  transition: all 0.3s ease;
 }
 
 .card h3 {
@@ -457,6 +452,23 @@ body.dark-mode {
 .card-meta {
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+/* white default, gradient on hover (like contact) */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  background: linear-gradient(135deg, #2563eb, #14b8a6, #f97316);
+  color: #020617;
+  border-color: transparent;
+}
+
+.card:hover h3,
+.card:hover p,
+.card:hover li,
+.card:hover span,
+.card:hover a {
+  color: #020617;
 }
 
 /* photo in inner pages */
@@ -487,30 +499,6 @@ body.dark-mode {
   font-size: 0.78rem;
   background: rgba(15, 23, 42, 0.04);
   border: 1px solid rgba(148, 163, 184, 0.4);
-}
-
-/* ============================================================
-   TIMELINE
-============================================================ */
-
-.timeline {
-  margin-top: 1.3rem;
-  border-left: 2px solid rgba(148, 163, 184, 0.7);
-  padding-left: 1.3rem;
-}
-
-.timeline-item {
-  margin-bottom: 1rem;
-}
-
-.timeline-title {
-  font-size: 0.98rem;
-  font-weight: 600;
-}
-
-.timeline-meta {
-  font-size: 0.82rem;
-  color: var(--muted);
 }
 
 /* ============================================================
@@ -613,46 +601,8 @@ textarea:focus {
   box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
 }
 
-/* CONTACT CARDS – white default, gradient on hover */
-
-.contact-section .card {
-  background: #ffffff;
-  color: #020617;
-  box-shadow: var(--shadow-soft);
-  border-radius: 26px;
-  border: 1px solid #d1d5db;
-  transition: background 0.35s ease, box-shadow 0.35s ease,
-    transform 0.25s ease, color 0.25s ease;
-}
-
-.contact-section .card h1,
-.contact-section .card h2,
-.contact-section .card h3,
-.contact-section .card p,
-.contact-section .card span,
-.contact-section .card label,
-.contact-section .card a {
-  color: #020617;
-}
-
-.contact-section .card:hover {
-  background: linear-gradient(135deg, #2563eb, #14b8a6, #f97316);
-  box-shadow: var(--shadow-strong);
-  transform: translateY(-4px);
-}
-
-.contact-section .card:hover h1,
-.contact-section .card:hover h2,
-.contact-section .card:hover h3,
-.contact-section .card:hover p,
-.contact-section .card:hover span,
-.contact-section .card:hover label,
-.contact-section .card:hover a {
-  color: #020617;
-}
-
-/* keep inner small pills white */
-.contact-section .contact-pill {
+/* keep inner small pills white even when card has gradient */
+.contact-section .card:hover .contact-pill {
   background: #ffffff;
 }
 
